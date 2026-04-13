@@ -2,892 +2,495 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Baseball Picks — Apr 05, 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLB Predictions — 2026-04-13</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#141c2b;padding:16px;color:#c8d6e8;font-size:16px}
-.page-header{text-align:center;margin-bottom:24px;padding:8px 0}
-.page-header h1{font-size:1.7rem;color:#7eb8f7;margin-bottom:4px;letter-spacing:.5px}
-.page-header .subtitle{color:#6b7f99;font-size:.9rem}
-.games-grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:1400px;margin:0 auto 24px}
-@media(min-width:640px){.games-grid{grid-template-columns:repeat(auto-fill,minmax(560px,1fr))}}
-.game-card{background:#1c2640;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.4);overflow:hidden;border:1px solid #26334d}
-.game-header{background:linear-gradient(135deg,#0d1b4b,#1a2f7a);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
-.game-matchup{font-size:1.15rem;font-weight:700;letter-spacing:.5px}
-.game-line{background:rgba(255,255,255,.15);padding:3px 10px;border-radius:10px;font-size:.85rem;font-weight:600;white-space:nowrap}
-.pitcher-line{background:#111827;padding:6px 16px;font-size:.78rem;color:#4e6480;border-bottom:1px solid #26334d}
-.conf-yes{color:#4ade80;font-weight:700}
-.conf-no{color:#f87171;font-weight:700}
-.picks-table{width:100%;border-collapse:collapse}
-.picks-table thead th{background:#131b2e;color:#5b7499;font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;padding:8px 12px;text-align:center;border-bottom:1px solid #26334d}
-.picks-table thead th:first-child{text-align:left}
-.picks-table tbody td{padding:10px 12px;border-top:1px solid #1e2d45;text-align:center;vertical-align:middle}
-.picks-table tbody td small{display:block;color:#4e6480;font-size:.73rem;margin-top:2px}
-.market-label{text-align:left!important;font-weight:600;color:#8da8c8;font-size:.85rem;white-space:nowrap}
-.badge{display:inline-block;padding:4px 10px;border-radius:6px;font-size:.8rem;font-weight:700;white-space:nowrap}
-.diff-warn{color:#f87171;font-size:.75rem;margin-left:3px}
-.badge.over{background:#14432a;color:#4ade80;border:1px solid #166534}
-.badge.lean-over{background:#0f2e1c;color:#34d399;border:1px solid #065f46}
-.badge.under{background:#450a0a;color:#f87171;border:1px solid #7f1d1d}
-.badge.lean-under{background:#431407;color:#fb923c;border:1px solid #7c2d12}
-.badge.home{background:#0c2050;color:#60a5fa;border:1px solid #1e3a8a}
-.badge.lean-home{background:#0a1a3d;color:#93c5fd;border:1px solid #1e3a8a}
-.badge.away{background:#2e1065;color:#c084fc;border:1px solid #4c1d95}
-.badge.lean-away{background:#200e47;color:#d8b4fe;border:1px solid #4c1d95}
-.badge.tie{background:#3d2e00;color:#fbbf24;border:1px solid #92400e}
-.badge.pass{background:#1a2235;color:#3d5070;border:1px solid #26334d}
-.forecast-panel{background:#131b2e;border-top:1px solid #26334d;padding:14px 16px}
-.fp-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;color:#7eb8f7;font-weight:700;margin-bottom:10px}
-.fp-row{display:flex;gap:8px;margin-bottom:8px;font-size:.82rem;line-height:1.5;align-items:flex-start;flex-wrap:wrap}
-.fp-label{font-weight:700;color:#5b7499;min-width:86px;flex-shrink:0;padding-top:1px}
-.fp-value{color:#a8bdd6;flex:1;min-width:0}
-.bets-section{padding:12px 16px;border-top:1px solid #3d2a00;background:#1c1600;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.bets-label{font-weight:700;color:#f59e0b;font-size:.72rem;text-transform:uppercase;flex-shrink:0}
-.bet-chip{background:#1d3461;color:#93c5fd;padding:6px 12px;border-radius:16px;font-size:.82rem;font-weight:600;border:1px solid #2d4f8a}
-.bet-chip .bet-detail{opacity:.7;font-weight:400;font-size:.76rem}
-.slate-container{background:#1c2640;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.4);padding:18px 16px;max-width:1400px;margin:0 auto 24px;border:1px solid #26334d}
-.slate-container h2{color:#7eb8f7;margin-bottom:14px;font-size:1.1rem}
-.slate-table{width:100%;border-collapse:collapse;font-size:.85rem}
-.slate-table thead th{background:#0d1b4b;color:#7eb8f7;padding:10px 12px;text-align:left;font-size:.75rem;border-bottom:1px solid #26334d}
-.slate-table tbody td{padding:10px 12px;border-top:1px solid #1e2d45;color:#a8bdd6}
-.slate-table tbody tr:hover td{background:#1a2540}
-.slate-total td{font-weight:700;background:#131b2e;color:#7eb8f7;padding:10px 12px;border-top:1px solid #26334d}
-.no-bets{color:#3d5070;font-style:italic;padding:8px 0}
-@media(max-width:480px){
-  body{padding:10px}
-  .game-matchup{font-size:1rem}
-  .picks-table thead th,.picks-table tbody td{padding:8px 8px}
-  .fp-row{flex-direction:column;gap:3px}
-  .fp-label{min-width:unset}
-  .slate-table thead th,.slate-table tbody td{padding:8px 8px;font-size:.78rem}
-}
+  body { font-family: 'Segoe UI', sans-serif; background: #0f1117; color: #e0e0e0; margin: 0; padding: 20px; }
+  h1 { color: #fff; border-bottom: 2px solid #1e88e5; padding-bottom: 10px; }
+  .date { color: #90caf9; font-size: 0.85em; margin-left: 12px; }
+  .game-card { background: #1a1d27; border-radius: 10px; padding: 18px; margin: 18px 0; border: 1px solid #2a2d3e; }
+  .matchup { font-size: 1.4em; font-weight: bold; color: #fff; margin-bottom: 4px; }
+  .venue { font-size: 0.85em; color: #888; margin-bottom: 10px; }
+  .lines { display: flex; gap: 20px; font-size: 0.9em; margin-bottom: 14px; color: #aaa; }
+  .lines b { color: #fff; }
+  .predictions { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+  .pred-block { background: #12151f; border-radius: 8px; padding: 12px; border: 1px solid #2a2d3e; }
+  .pred-label { font-size: 0.75em; color: #888; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .pred-decision { font-size: 1.1em; font-weight: bold; margin-bottom: 6px; padding: 3px 8px; border-radius: 4px; display: inline-block; }
+  .decision-bet { background: #1b3a1b; color: #66bb6a; }
+  .decision-bet.decision-away { background: #3a1b1b; color: #ef5350; }
+  .decision-lean { background: #1b2d3a; color: #42a5f5; }
+  .decision-lean.decision-away { background: #2d1b3a; color: #ab47bc; }
+  .decision-pass { background: #2a2a2a; color: #888; }
+  .pred-stats { font-size: 0.8em; color: #aaa; margin-bottom: 6px; }
+  .pred-analysis { font-size: 0.72em; color: #666; line-height: 1.5; }
+  .starters { margin-top: 12px; display: flex; gap: 20px; font-size: 0.85em; color: #aaa; border-top: 1px solid #2a2d3e; padding-top: 10px; }
+  .starters b { color: #fff; }
+  .ai-summary { margin-top: 12px; font-size: 0.88em; color: #ccc; border-top: 1px solid #2a2d3e; padding-top: 10px; }
+  footer { text-align: center; color: #444; font-size: 0.8em; margin-top: 30px; padding-top: 10px; border-top: 1px solid #2a2d3e; }
 </style>
 </head>
 <body>
-<div class="page-header">
-  <h1>⚾ Baseball Picks</h1>
-  <div class="subtitle">April 05, 2026 &nbsp;·&nbsp; Generated 12:00 AM</div>
-</div>
-<div class="games-grid">
-
+<h1>MLB Model Predictions <span class="date">2026-04-13</span></h1>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">CHC @ CLE</span>
-    <span class="game-line">o/u 7.5 &nbsp;·&nbsp; F5 3.50</span>
-  </div>
-  <div class="pitcher-line">CHC SP ERA 3.53 (Edward Cabrera) <span class="conf-yes">✓</span> &nbsp;·&nbsp; CLE SP ERA 4.30 (Slade Cecconi) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (7.5)</td>
-        <td><span class="badge lean-under">LN UNDER</span> <small>39% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge pass">PASS</span> <small>59% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (3.50)</td>
-        <td><span class="badge over">OVER</span> <small>75% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge lean-away">LN AWAY</span> <small>37% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">CHC 0-1 (L10: 5-5) &nbsp;·&nbsp; CLE 1-0 (L10: 6-4)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">CHC 3O-4U (L10: 4O-6U) &nbsp;·&nbsp; CLE 3O-5U (L10: 4O-5U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 4O-6U &nbsp;·&nbsp; CLE wins 4-0</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">HOU @ SEA</div>
+<div class="venue">T-Mobile Park</div>
+<div class="lines">
+<span>Game O/U: <b>7.5</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away +145 / Home -170</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 93.2% &nbsp;|&nbsp; Conf: 88% &nbsp;|&nbsp; Score: +1.75</div>
+  <div class="pred-analysis">Proj: 9.56 vs 7.5 (diff=+2.06) → +1.00 | Synergy: AwayO=5.81 HomeO=3.94 AwayERA=5.63 HomeERA=3.60 → +0.00 | Season O/U: Away=11-5 (0.69) Home=7-9 (0.44) → +0.15 | L10 O/U: Away=7-3 (0.70) Home=4-6 (0.40) → +0.20 | L10 Run Env: 10.15 vs line 7.5 → +0.25 | H2H: 8-2 (10g, avgRuns=10.3) → +0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 90.5% &nbsp;|&nbsp; Conf: 63% &nbsp;|&nbsp; Score: +1.25</div>
+  <div class="pred-analysis">Net R: H=+0.44 A=-0.50 → +0.42 | Matchup: H_Off/A_Def=0.62 A_Off/H_Def=1.66 → -0.40 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=5.63 Home=3.60 (diff=+2.03) → +0.50 | Momentum: H=0.40 (4-6) A=0.20 (2-8) → +0.20 | Season: H=6-4 (0.60) A=1-8 (0.11) → +0.25 | H2H Winner: 8-2 (10g) → +0.20</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 81.8% &nbsp;|&nbsp; Conf: 50% &nbsp;|&nbsp; Score: +1.00</div>
+  <div class="pred-analysis">F5 Proj: 5.23 vs 4.5 (diff=+0.73) → +0.45 | ERA Quality: Away=5.63 Home=3.60 avg=4.62 → +0.20 | L10 O/U: Away=0.70 Home=0.40 → +0.15 | H2H F5 Est: 5.67 vs 4.5 → +0.20</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 81.1% &nbsp;|&nbsp; Conf: 41% &nbsp;|&nbsp; Score: +0.81</div>
+  <div class="pred-analysis">F5 Starter: Away=5.63 Home=3.60 (diff=+2.03) → +0.65 | F5 Matchup: H_Off/A_Def=0.62 A_Off/H_Def=1.66 → -0.25 | Home Field: +0.06 | Momentum: H=0.40 A=0.20 → +0.15 | H2H: 8-2 (10g) → +0.20</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Tie Prob: 0.0% &nbsp;|&nbsp; Conf: 0% &nbsp;|&nbsp; Score: +0.00</div>
+  <div class="pred-analysis">Parity: Away=0.11 Home=0.60 (gap=0.49) → +0.00 | Starter Duel: Away=5.63 Home=3.60 → +0.00 | F5 Uncertainty: f5Score=+1.00 → +0.00 | F5 Winner Uncertainty: edge=+0.81 → +0.00 | L10 Run Env: avgRpG=4.65 → +0.00</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>5.63</b></span>
+<span>Home SP ERA: <b>3.60</b></span>
+</div>
+<div class="ai-summary" id="summary-HOU-SEA"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">CHC @ CLE</span>
-    <span class="game-line">o/u 7.5 &nbsp;·&nbsp; F5 3.50</span>
-  </div>
-  <div class="pitcher-line">CHC SP ERA 3.73 (Shota Imanaga) <span class="conf-yes">✓</span> &nbsp;·&nbsp; CLE SP ERA 2.72 (Parker Messick) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (7.5)</td>
-        <td><span class="badge under">UNDER</span> <small>23% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge home">HOME</span> <small>80% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (3.50)</td>
-        <td><span class="badge over">OVER</span> <small>66% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge lean-home">LN HOME</span> <small>65% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">CHC 0-1 (L10: 5-5) &nbsp;·&nbsp; CLE 1-0 (L10: 6-4)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">CHC 3O-4U (L10: 4O-6U) &nbsp;·&nbsp; CLE 3O-5U (L10: 4O-5U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 4O-6U &nbsp;·&nbsp; CLE wins 4-0</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">ARI @ BAL</div>
+<div class="venue">Oriole Park at Camden Yards</div>
+<div class="lines">
+<span>Game O/U: <b>8.5</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away +110 / Home -130</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 51.9% &nbsp;|&nbsp; Conf: 3% &nbsp;|&nbsp; Score: +0.05</div>
+  <div class="pred-analysis">Proj: 8.25 vs 8.5 (diff=-0.25) → +0.00 | Synergy: AwayO=4.00 HomeO=4.00 AwayERA=4.20 HomeERA=4.20 → -0.15 | Season O/U: Away=9-6 (0.60) Home=8-7 (0.53) → +0.15 | L10 O/U: Away=5-4 (0.55) Home=6-4 (0.60) → +0.20 | L10 Run Env: 7.95 vs line 8.5 → -0.15 | H2H: 5-5 (10g, avgRuns=8.4) → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-lean">LEAN HOME</div>
+  <div class="pred-stats">Home Win: 68.5% &nbsp;|&nbsp; Conf: 22% &nbsp;|&nbsp; Score: +0.43</div>
+  <div class="pred-analysis">Net R: H=+0.07 A=-0.38 → +0.20 | Matchup: H_Off/A_Def=0.91 A_Off/H_Def=1.02 → +0.00 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=4.20 Home=4.20 (diff=+0.00) → +0.00 | Momentum: H=0.60 (6-4) A=0.60 (6-4) → +0.00 | Season: H=5-4 (0.56) A=4-5 (0.44) → +0.15 | H2H Winner: 5-5 (10g) → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-lean">LEAN OVER</div>
+  <div class="pred-stats">Over: 59.3% &nbsp;|&nbsp; Conf: 13% &nbsp;|&nbsp; Score: +0.25</div>
+  <div class="pred-analysis">F5 Proj: 4.55 vs 4.5 (diff=+0.05) → +0.00 | ERA Quality: Away=4.20 Home=4.20 avg=4.20 → +0.10 | L10 O/U: Away=0.55 Home=0.60 → +0.15 | H2H F5 Est: 4.62 vs 4.5 → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Home Win: 52.7% &nbsp;|&nbsp; Conf: 3% &nbsp;|&nbsp; Score: +0.06</div>
+  <div class="pred-analysis">F5 Starter: Away=4.20 Home=4.20 (diff=+0.00) → +0.00 | F5 Matchup: H_Off/A_Def=0.91 A_Off/H_Def=1.02 → +0.00 | Home Field: +0.06 | Momentum: H=0.60 A=0.60 → +0.00 | H2H: 5-5 (10g) → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-bet">BET TIE</div>
+  <div class="pred-stats">Tie Prob: 53.0% &nbsp;|&nbsp; Conf: 53% &nbsp;|&nbsp; Score: +0.53</div>
+  <div class="pred-analysis">Parity: Away=0.44 Home=0.56 (gap=0.11) → +0.10 | Starter Duel: Away=4.20 Home=4.20 → +0.00 | F5 Uncertainty: f5Score=+0.25 → +0.15 | F5 Winner Uncertainty: edge=+0.06 → +0.20 | L10 Run Env: avgRpG=4.05 → +0.08</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>4.20</b></span>
+<span>Home SP ERA: <b>4.20</b> ⚠ unconfirmed</span>
+</div>
+<div class="ai-summary" id="summary-ARI-BAL"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">LAD @ WSH</span>
-    <span class="game-line">o/u 9.0 &nbsp;·&nbsp; F5 4.50</span>
-  </div>
-  <div class="pitcher-line">LAD SP ERA 4.46 (Roki Sasaki) <span class="conf-yes">✓</span> &nbsp;·&nbsp; WSH SP ERA 3.60 (Foster Griffin) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (9.0)</td>
-        <td><span class="badge over">OVER</span> <small>92% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge away">AWAY</span> <small>3% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (4.50)</td>
-        <td><span class="badge over">OVER</span> <small>83% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge away">AWAY</span> <small>19% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">LAD 2-0 (L10: 8-2) &nbsp;·&nbsp; WSH 0-2 (L10: 4-6)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">LAD 4O-4U (L10: 5O-5U) &nbsp;·&nbsp; WSH 6O-2U (L10: 7O-2U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 9O-1U &nbsp;·&nbsp; WSH wins 2-5</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">WSN @ PIT</div>
+<div class="venue">PNC Park</div>
+<div class="lines">
+<span>Game O/U: <b>7.5</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away +185 / Home -220</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 87.5% &nbsp;|&nbsp; Conf: 65% &nbsp;|&nbsp; Score: +1.30</div>
+  <div class="pred-analysis">Proj: 9.13 vs 7.5 (diff=+1.63) → +0.70 | Synergy: AwayO=5.93 HomeO=4.40 AwayERA=2.51 HomeERA=5.25 → +0.00 | Season O/U: Away=11-4 (0.73) Home=9-6 (0.60) → +0.15 | L10 O/U: Away=8-2 (0.80) Home=7-3 (0.70) → +0.35 | L10 Run Env: 10.10 vs line 7.5 → +0.25 | H2H: 5-5 (10g, avgRuns=7.9) → -0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-lean decision-away">LEAN AWAY</div>
+  <div class="pred-stats">Home Win: 36.5% &nbsp;|&nbsp; Conf: 15% &nbsp;|&nbsp; Score: -0.31</div>
+  <div class="pred-analysis">Net R: H=+0.53 A=+0.06 → +0.21 | Matchup: H_Off/A_Def=0.75 A_Off/H_Def=1.53 → -0.40 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=2.51 Home=5.25 (diff=-2.74) → -0.50 | Momentum: H=0.70 (7-3) A=0.40 (4-6) → +0.30 | Season: H=4-2 (0.67) A=6-3 (0.67) → +0.00 | H2H Winner: 5-5 (10g) → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 69.5% &nbsp;|&nbsp; Conf: 28% &nbsp;|&nbsp; Score: +0.55</div>
+  <div class="pred-analysis">F5 Proj: 4.89 vs 4.5 (diff=+0.39) → +0.25 | ERA Quality: Away=2.51 Home=5.25 avg=3.88 → +0.00 | L10 O/U: Away=0.80 Home=0.70 → +0.30 | H2H F5 Est: 4.35 vs 4.5 → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-bet decision-away">AWAY</div>
+  <div class="pred-stats">Home Win: 22.4% &nbsp;|&nbsp; Conf: 35% &nbsp;|&nbsp; Score: -0.69</div>
+  <div class="pred-analysis">F5 Starter: Away=2.51 Home=5.25 (diff=-2.74) → -0.65 | F5 Matchup: H_Off/A_Def=0.75 A_Off/H_Def=1.53 → -0.25 | Home Field: +0.06 | Momentum: H=0.70 A=0.40 → +0.15 | H2H: 5-5 (10g) → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-lean">LEAN TIE</div>
+  <div class="pred-stats">Tie Prob: 40.0% &nbsp;|&nbsp; Conf: 40% &nbsp;|&nbsp; Score: +0.40</div>
+  <div class="pred-analysis">Parity: Away=0.67 Home=0.67 (gap=0.00) → +0.30 | Starter Duel: Away=2.51 Home=5.25 → +0.10 | F5 Uncertainty: f5Score=+0.55 → +0.00 | F5 Winner Uncertainty: edge=-0.69 → +0.00 | L10 Run Env: avgRpG=5.05 → +0.00</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>2.51</b></span>
+<span>Home SP ERA: <b>5.25</b></span>
+</div>
+<div class="ai-summary" id="summary-WSN-PIT"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">BAL @ PIT</span>
-    <span class="game-line">o/u 8.5 &nbsp;·&nbsp; F5 4.50</span>
-  </div>
-  <div class="pitcher-line">BAL SP ERA 3.96 (Chris Bassitt) <span class="conf-yes">✓</span> &nbsp;·&nbsp; PIT SP ERA 2.71 (Braxton Ashcraft) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (8.5)</td>
-        <td><span class="badge under">UNDER</span> <small>13% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge home">HOME</span> <small>93% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (4.50)</td>
-        <td><span class="badge under">UNDER</span> <small>19% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge home">HOME</span> <small>90% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">BAL 0-2 (L10: 3-7) &nbsp;·&nbsp; PIT 2-0 (L10: 6-4)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">BAL 4O-4U (L10: 4O-6U) &nbsp;·&nbsp; PIT 4O-4U (L10: 4O-6U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 2O-8U &nbsp;·&nbsp; PIT wins 4-1</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">CHC @ PHI</div>
+<div class="venue">Citizens Bank Park</div>
+<div class="lines">
+<span>Game O/U: <b>8</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away +155 / Home -185</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-bet decision-away">UNDER</div>
+  <div class="pred-stats">Over: 18.2% &nbsp;|&nbsp; Conf: 50% &nbsp;|&nbsp; Score: -1.00</div>
+  <div class="pred-analysis">Proj: 5.54 vs 8 (diff=-2.46) → -1.00 | Synergy: AwayO=4.40 HomeO=3.53 AwayERA=0.00 HomeERA=1.65 → -0.20 | Season O/U: Away=8-7 (0.53) Home=7-7 (0.50) → +0.00 | L10 O/U: Away=6-4 (0.60) Home=4-6 (0.40) → +0.20 | L10 Run Env: 7.10 vs line 8 → -0.15 | H2H: 6-4 (10g, avgRuns=9.9) → +0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-bet decision-away">AWAY</div>
+  <div class="pred-stats">Home Win: 14.1% &nbsp;|&nbsp; Conf: 50% &nbsp;|&nbsp; Score: -1.00</div>
+  <div class="pred-analysis">Net R: H=-1.07 A=+0.67 → -0.78 | Matchup: H_Off/A_Def=0.95 A_Off/H_Def=0.96 → +0.00 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=0.00 Home=1.65 (diff=-1.65) → -0.40 | Momentum: H=0.50 (5-5) A=0.40 (4-6) → +0.00 | Season: H=4-5 (0.44) A=3-3 (0.50) → +0.00 | H2H Winner: 6-4 (10g) → +0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-bet decision-away">UNDER</div>
+  <div class="pred-stats">Over: 24.5% &nbsp;|&nbsp; Conf: 38% &nbsp;|&nbsp; Score: -0.75</div>
+  <div class="pred-analysis">F5 Proj: 2.69 vs 4.5 (diff=-1.81) → -0.70 | ERA Quality: Away=0.00 Home=1.65 avg=0.83 → -0.30 | L10 O/U: Away=0.60 Home=0.40 → +0.15 | H2H F5 Est: 5.45 vs 4.5 → +0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-lean decision-away">LEAN AWAY</div>
+  <div class="pred-stats">Home Win: 35.2% &nbsp;|&nbsp; Conf: 17% &nbsp;|&nbsp; Score: -0.34</div>
+  <div class="pred-analysis">F5 Starter: Away=0.00 Home=1.65 (diff=-1.65) → -0.50 | F5 Matchup: H_Off/A_Def=0.95 A_Off/H_Def=0.96 → +0.00 | Home Field: +0.06 | Momentum: H=0.50 A=0.40 → +0.00 | H2H: 6-4 (10g) → +0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-bet">BET TIE</div>
+  <div class="pred-stats">Tie Prob: 58.0% &nbsp;|&nbsp; Conf: 58% &nbsp;|&nbsp; Score: +0.58</div>
+  <div class="pred-analysis">Parity: Away=0.50 Home=0.44 (gap=0.06) → +0.20 | Starter Duel: Away=0.00 Home=1.65 → +0.30 | F5 Uncertainty: f5Score=-0.75 → +0.00 | F5 Winner Uncertainty: edge=-0.34 → +0.00 | L10 Run Env: avgRpG=3.60 → +0.08</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>0.00</b></span>
+<span>Home SP ERA: <b>1.65</b></span>
+</div>
+<div class="ai-summary" id="summary-CHC-PHI"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">SD @ BOS</span>
-    <span class="game-line">o/u 9.0 &nbsp;·&nbsp; F5 4.50</span>
-  </div>
-  <div class="pitcher-line">SD SP ERA 4.93 (Walker Buehler) <span class="conf-yes">✓</span> &nbsp;·&nbsp; BOS SP ERA 3.20 (Ranger Suarez) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (9.0)</td>
-        <td><span class="badge under">UNDER</span> <small>12% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge pass">PASS</span> <small>49% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (4.50)</td>
-        <td><span class="badge lean-under">LN UNDER</span> <small>41% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge lean-home">LN HOME</span> <small>63% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">SD 1-1 (L10: 4-6) &nbsp;·&nbsp; BOS 1-1 (L10: 2-8)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">SD 2O-5U (L10: 2O-7U) &nbsp;·&nbsp; BOS 4O-4U (L10: 4O-6U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 5O-5U &nbsp;·&nbsp; BOS wins 2-3</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">LAA @ NYY</div>
+<div class="venue">Yankee Stadium</div>
+<div class="lines">
+<span>Game O/U: <b>9.5</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away +160 / Home -190</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-lean decision-away">LEAN UNDER</div>
+  <div class="pred-stats">Over: 38.9% &nbsp;|&nbsp; Conf: 15% &nbsp;|&nbsp; Score: -0.30</div>
+  <div class="pred-analysis">Proj: 8.92 vs 9.5 (diff=-0.58) → -0.25 | Synergy: AwayO=4.56 HomeO=4.33 AwayERA=6.75 HomeERA=3.07 → +0.00 | Season O/U: Away=10-6 (0.63) Home=6-8 (0.43) → +0.15 | L10 O/U: Away=8-2 (0.80) Home=6-4 (0.60) → +0.20 | L10 Run Env: 8.95 vs line 9.5 → -0.15 | H2H: 5-5 (10g, avgRuns=6.2) → -0.25</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 87.3% &nbsp;|&nbsp; Conf: 54% &nbsp;|&nbsp; Score: +1.07</div>
+  <div class="pred-analysis">Net R: H=+1.40 A=-0.25 → +0.74 | Matchup: H_Off/A_Def=0.90 A_Off/H_Def=1.56 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=6.75 Home=3.07 (diff=+3.68) → +0.50 | Momentum: H=0.40 (4-6) A=0.50 (5-5) → +0.00 | Season: H=3-3 (0.50) A=5-5 (0.50) → +0.00 | H2H Winner: 5-5 (10g) → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-lean">LEAN OVER</div>
+  <div class="pred-stats">Over: 64.6% &nbsp;|&nbsp; Conf: 20% &nbsp;|&nbsp; Score: +0.40</div>
+  <div class="pred-analysis">F5 Proj: 4.99 vs 4.5 (diff=+0.49) → +0.25 | ERA Quality: Away=6.75 Home=3.07 avg=4.91 → +0.20 | L10 O/U: Away=0.80 Home=0.60 → +0.15 | H2H F5 Est: 3.41 vs 4.5 → -0.20</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 73.3% &nbsp;|&nbsp; Conf: 28% &nbsp;|&nbsp; Score: +0.56</div>
+  <div class="pred-analysis">F5 Starter: Away=6.75 Home=3.07 (diff=+3.68) → +0.65 | F5 Matchup: H_Off/A_Def=0.90 A_Off/H_Def=1.56 → -0.15 | Home Field: +0.06 | Momentum: H=0.40 A=0.50 → +0.00 | H2H: 5-5 (10g) → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-bet">BET TIE</div>
+  <div class="pred-stats">Tie Prob: 48.0% &nbsp;|&nbsp; Conf: 48% &nbsp;|&nbsp; Score: +0.48</div>
+  <div class="pred-analysis">Parity: Away=0.50 Home=0.50 (gap=0.00) → +0.30 | Starter Duel: Away=6.75 Home=3.07 → +0.10 | F5 Uncertainty: f5Score=+0.40 → +0.08 | F5 Winner Uncertainty: edge=+0.56 → +0.00 | L10 Run Env: avgRpG=4.50 → +0.00</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>6.75</b></span>
+<span>Home SP ERA: <b>3.07</b></span>
+</div>
+<div class="ai-summary" id="summary-LAA-NYY"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">MIA @ NYY</span>
-    <span class="game-line">o/u 8.5 &nbsp;·&nbsp; F5 4.50</span>
-  </div>
-  <div class="pitcher-line">MIA SP ERA 5.35 (Chris Paddack) <span class="conf-yes">✓</span> &nbsp;·&nbsp; NYY SP ERA 2.86 (Max Fried) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (8.5)</td>
-        <td><span class="badge lean-over">LN OVER</span> <small>63% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge home">HOME</span> <small>97% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (4.50)</td>
-        <td><span class="badge pass">PASS</span> <small>54% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge home">HOME</span> <small>95% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">MIA 0-2 (L10: 6-4) &nbsp;·&nbsp; NYY 2-0 (L10: 8-2)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">MIA 5O-3U (L10: 5O-5U) &nbsp;·&nbsp; NYY 3O-4U (L10: 4O-5U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 5O-5U &nbsp;·&nbsp; NYY wins 4-1</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">MIA @ ATL</div>
+<div class="venue">Truist Park</div>
+<div class="lines">
+<span>Game O/U: <b>8.5</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away +130 / Home -150</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 59.3% &nbsp;|&nbsp; Conf: 13% &nbsp;|&nbsp; Score: +0.25</div>
+  <div class="pred-analysis">Proj: 8.18 vs 8.5 (diff=-0.32) → -0.25 | Synergy: AwayO=4.38 HomeO=5.62 AwayERA=5.06 HomeERA=2.55 → +0.00 | Season O/U: Away=10-5 (0.67) Home=7-9 (0.44) → +0.15 | L10 O/U: Away=7-2 (0.75) Home=7-3 (0.70) → +0.35 | L10 Run Env: 9.35 vs line 8.5 → +0.15 | H2H: 7-3 (10g, avgRuns=9.4) → -0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 97.3% &nbsp;|&nbsp; Conf: 100% &nbsp;|&nbsp; Score: +2.00</div>
+  <div class="pred-analysis">Net R: H=+2.87 A=+0.00 → +1.29 | Matchup: H_Off/A_Def=1.28 A_Off/H_Def=1.59 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=5.06 Home=2.55 (diff=+2.51) → +0.50 | Momentum: H=0.60 (6-4) A=0.30 (3-7) → +0.30 | Season: H=6-3 (0.67) A=1-5 (0.17) → +0.25 | H2H Winner: 7-3 (10g) → +0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 64.6% &nbsp;|&nbsp; Conf: 20% &nbsp;|&nbsp; Score: +0.40</div>
+  <div class="pred-analysis">F5 Proj: 4.45 vs 4.5 (diff=-0.05) → +0.00 | ERA Quality: Away=5.06 Home=2.55 avg=3.81 → +0.00 | L10 O/U: Away=0.75 Home=0.70 → +0.30 | H2H F5 Est: 5.17 vs 4.5 → +0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 89.0% &nbsp;|&nbsp; Conf: 58% &nbsp;|&nbsp; Score: +1.16</div>
+  <div class="pred-analysis">F5 Starter: Away=5.06 Home=2.55 (diff=+2.51) → +0.65 | F5 Matchup: H_Off/A_Def=1.28 A_Off/H_Def=1.59 → +0.15 | Home Field: +0.06 | Momentum: H=0.60 A=0.30 → +0.15 | H2H: 7-3 (10g) → +0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Tie Prob: 18.0% &nbsp;|&nbsp; Conf: 18% &nbsp;|&nbsp; Score: +0.18</div>
+  <div class="pred-analysis">Parity: Away=0.17 Home=0.67 (gap=0.50) → +0.00 | Starter Duel: Away=5.06 Home=2.55 → +0.10 | F5 Uncertainty: f5Score=+0.40 → +0.08 | F5 Winner Uncertainty: edge=+1.16 → +0.00 | L10 Run Env: avgRpG=5.15 → +0.00</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>5.06</b></span>
+<span>Home SP ERA: <b>2.55</b></span>
+</div>
+<div class="ai-summary" id="summary-MIA-ATL"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">TB @ MIN</span>
-    <span class="game-line">o/u 8.0 &nbsp;·&nbsp; F5 4.50</span>
-  </div>
-  <div class="pitcher-line">TB SP ERA 4.45 (Nick Martinez) <span class="conf-yes">✓</span> &nbsp;·&nbsp; MIN SP ERA 4.04 (Simeon Woods Richardson) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (8.0)</td>
-        <td><span class="badge over">OVER</span> <small>90% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge home">HOME</span> <small>82% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (4.50)</td>
-        <td><span class="badge over">OVER</span> <small>85% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge home">HOME</span> <small>71% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">TB 3-5 (L10: 3-7) &nbsp;·&nbsp; MIN 1-1 (L10: 4-6)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">TB 7O-1U (L10: 8O-2U) &nbsp;·&nbsp; MIN 4O-4U (L10: 4O-6U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 5O-3U &nbsp;·&nbsp; MIN wins 3-2</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">BOS @ MIN</div>
+<div class="venue">Target Field</div>
+<div class="lines">
+<span>Game O/U: <b>7.5</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away -165 / Home +140</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 85.8% &nbsp;|&nbsp; Conf: 60% &nbsp;|&nbsp; Score: +1.20</div>
+  <div class="pred-analysis">Proj: 8.65 vs 7.5 (diff=+1.15) → +0.45 | Synergy: AwayO=4.13 HomeO=4.94 AwayERA=3.12 HomeERA=5.27 → +0.00 | Season O/U: Away=8-7 (0.53) Home=9-7 (0.56) → +0.15 | L10 O/U: Away=5-5 (0.50) Home=7-3 (0.70) → +0.20 | L10 Run Env: 9.05 vs line 7.5 → +0.25 | H2H: 4-6 (10g, avgRuns=9.7) → +0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-lean">LEAN HOME</div>
+  <div class="pred-stats">Home Win: 67.5% &nbsp;|&nbsp; Conf: 20% &nbsp;|&nbsp; Score: +0.41</div>
+  <div class="pred-analysis">Net R: H=+0.50 A=+0.00 → +0.23 | Matchup: H_Off/A_Def=1.20 A_Off/H_Def=0.93 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=3.12 Home=5.27 (diff=-2.15) → -0.50 | Momentum: H=0.70 (7-3) A=0.50 (5-5) → +0.20 | Season: H=5-2 (0.71) A=3-6 (0.33) → +0.25 | H2H Winner: 4-6 (10g) → -0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-lean">LEAN OVER</div>
+  <div class="pred-stats">Over: 62.8% &nbsp;|&nbsp; Conf: 18% &nbsp;|&nbsp; Score: +0.35</div>
+  <div class="pred-analysis">F5 Proj: 4.73 vs 4.5 (diff=+0.23) → +0.00 | ERA Quality: Away=3.12 Home=5.27 avg=4.20 → +0.10 | L10 O/U: Away=0.50 Home=0.70 → +0.15 | H2H F5 Est: 5.34 vs 4.5 → +0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-lean decision-away">LEAN AWAY</div>
+  <div class="pred-stats">Home Win: 33.1% &nbsp;|&nbsp; Conf: 20% &nbsp;|&nbsp; Score: -0.39</div>
+  <div class="pred-analysis">F5 Starter: Away=3.12 Home=5.27 (diff=-2.15) → -0.65 | F5 Matchup: H_Off/A_Def=1.20 A_Off/H_Def=0.93 → +0.15 | Home Field: +0.06 | Momentum: H=0.70 A=0.50 → +0.15 | H2H: 4-6 (10g) → -0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Tie Prob: 18.0% &nbsp;|&nbsp; Conf: 18% &nbsp;|&nbsp; Score: +0.18</div>
+  <div class="pred-analysis">Parity: Away=0.33 Home=0.71 (gap=0.38) → +0.00 | Starter Duel: Away=3.12 Home=5.27 → +0.10 | F5 Uncertainty: f5Score=+0.35 → +0.08 | F5 Winner Uncertainty: edge=-0.39 → +0.00 | L10 Run Env: avgRpG=5.10 → +0.00</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>3.12</b></span>
+<span>Home SP ERA: <b>5.27</b></span>
+</div>
+<div class="ai-summary" id="summary-BOS-MIN"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">TOR @ CWS</span>
-    <span class="game-line">o/u 8.0 &nbsp;·&nbsp; F5 4.50</span>
-  </div>
-  <div class="pitcher-line">TOR SP ERA 3.18 (Eric Lauer) <span class="conf-yes">✓</span> &nbsp;·&nbsp; CWS SP ERA 4.10 (Davis Martin) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (8.0)</td>
-        <td><span class="badge over">OVER</span> <small>85% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge away">AWAY</span> <small>9% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (4.50)</td>
-        <td><span class="badge over">OVER</span> <small>66% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge away">AWAY</span> <small>19% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">TOR 0-2 (L10: 4-6) &nbsp;·&nbsp; CWS 2-0 (L10: 4-6)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">TOR 4O-4U (L10: 5O-5U) &nbsp;·&nbsp; CWS 7O-1U (L10: 8O-1U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 4O-6U &nbsp;·&nbsp; CWS wins 3-4</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">CLE @ STL</div>
+<div class="venue">Busch Stadium</div>
+<div class="lines">
+<span>Game O/U: <b>8</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away -115 / Home -100</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-bet decision-away">UNDER</div>
+  <div class="pred-stats">Over: 30.5% &nbsp;|&nbsp; Conf: 28% &nbsp;|&nbsp; Score: -0.55</div>
+  <div class="pred-analysis">Proj: 7.43 vs 8 (diff=-0.57) → -0.25 | Synergy: AwayO=3.62 HomeO=4.40 AwayERA=2.04 HomeERA=3.38 → +0.00 | Season O/U: Away=7-9 (0.44) Home=8-6 (0.57) → +0.15 | L10 O/U: Away=4-6 (0.40) Home=5-4 (0.55) → -0.20 | L10 Run Env: 8.30 vs line 8 → +0.00 | H2H: 6-4 (10g, avgRuns=7.3) → -0.25</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-lean decision-away">LEAN AWAY</div>
+  <div class="pred-stats">Home Win: 37.6% &nbsp;|&nbsp; Conf: 14% &nbsp;|&nbsp; Score: -0.28</div>
+  <div class="pred-analysis">Net R: H=-0.93 A=-0.57 → -0.16 | Matchup: H_Off/A_Def=1.05 A_Off/H_Def=0.68 → +0.00 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=2.04 Home=3.38 (diff=-1.34) → -0.30 | Momentum: H=0.50 (5-5) A=0.50 (5-5) → +0.00 | Season: H=5-4 (0.56) A=5-5 (0.50) → +0.00 | H2H Winner: 6-4 (10g) → +0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-bet decision-away">UNDER</div>
+  <div class="pred-stats">Over: 23.1% &nbsp;|&nbsp; Conf: 40% &nbsp;|&nbsp; Score: -0.80</div>
+  <div class="pred-analysis">F5 Proj: 3.90 vs 4.5 (diff=-0.60) → -0.25 | ERA Quality: Away=2.04 Home=3.38 avg=2.71 → -0.30 | L10 O/U: Away=0.40 Home=0.55 → -0.15 | H2H F5 Est: 4.02 vs 4.5 → -0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Home Win: 41.5% &nbsp;|&nbsp; Conf: 10% &nbsp;|&nbsp; Score: -0.19</div>
+  <div class="pred-analysis">F5 Starter: Away=2.04 Home=3.38 (diff=-1.34) → -0.35 | F5 Matchup: H_Off/A_Def=1.05 A_Off/H_Def=0.68 → +0.00 | Home Field: +0.06 | Momentum: H=0.50 A=0.50 → +0.00 | H2H: 6-4 (10g) → +0.10</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-bet">BET TIE</div>
+  <div class="pred-stats">Tie Prob: 58.0% &nbsp;|&nbsp; Conf: 58% &nbsp;|&nbsp; Score: +0.58</div>
+  <div class="pred-analysis">Parity: Away=0.50 Home=0.56 (gap=0.06) → +0.20 | Starter Duel: Away=2.04 Home=3.38 → +0.20 | F5 Uncertainty: f5Score=-0.80 → +0.00 | F5 Winner Uncertainty: edge=-0.19 → +0.10 | L10 Run Env: avgRpG=3.75 → +0.08</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>2.04</b></span>
+<span>Home SP ERA: <b>3.38</b></span>
+</div>
+<div class="ai-summary" id="summary-CLE-STL"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">MIL @ KC</span>
-    <span class="game-line">o/u 7.5 &nbsp;·&nbsp; F5 4.50</span>
-  </div>
-  <div class="pitcher-line">MIL SP ERA 4.04 (Kyle Harrison) <span class="conf-yes">✓</span> &nbsp;·&nbsp; KC SP ERA 2.55 (Kris Bubic) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (7.5)</td>
-        <td><span class="badge over">OVER</span> <small>70% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge away">AWAY</span> <small>17% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (4.50)</td>
-        <td><span class="badge under">UNDER</span> <small>34% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge away">AWAY</span> <small>30% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">MIL 1-1 (L10: 6-4) &nbsp;·&nbsp; KC 3-2 (L10: 6-4)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">MIL 5O-3U (L10: 5O-5U) &nbsp;·&nbsp; KC 2O-6U (L10: 3O-7U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 5O-5U &nbsp;·&nbsp; KC wins 3-2</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">TEX @ OAK</div>
+<div class="venue">Sutter Health Park</div>
+<div class="lines">
+<span>Game O/U: <b>8.5</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away -125 / Home +105</span>
+</div>
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 59.3% &nbsp;|&nbsp; Conf: 13% &nbsp;|&nbsp; Score: +0.25</div>
+  <div class="pred-analysis">Proj: 10.19 vs 8.5 (diff=+1.69) → +0.70 | Synergy: AwayO=3.93 HomeO=4.20 AwayERA=7.98 HomeERA=5.40 → +0.05 | Season O/U: Away=6-7 (0.46) Home=5-10 (0.33) → -0.15 | L10 O/U: Away=3-6 (0.35) Home=4-6 (0.40) → -0.20 | L10 Run Env: 7.80 vs line 8.5 → -0.15 | H2H: 3-7 (10g, avgRuns=8.5) → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 84.8% &nbsp;|&nbsp; Conf: 48% &nbsp;|&nbsp; Score: +0.95</div>
+  <div class="pred-analysis">Net R: H=-0.13 A=+0.26 → -0.18 | Matchup: H_Off/A_Def=1.14 A_Off/H_Def=0.91 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=7.98 Home=5.40 (diff=+2.58) → +0.50 | Momentum: H=0.70 (7-3) A=0.40 (4-6) → +0.30 | Season: H=2-1 (0.67) A=5-4 (0.56) → +0.15 | H2H Winner: 3-7 (10g) → -0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 78.2% &nbsp;|&nbsp; Conf: 43% &nbsp;|&nbsp; Score: +0.85</div>
+  <div class="pred-analysis">F5 Proj: 5.90 vs 4.5 (diff=+1.40) → +0.70 | ERA Quality: Away=7.98 Home=5.40 avg=6.69 → +0.30 | L10 O/U: Away=0.35 Home=0.40 → -0.15 | H2H F5 Est: 4.68 vs 4.5 → +0.00</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 82.5% &nbsp;|&nbsp; Conf: 43% &nbsp;|&nbsp; Score: +0.86</div>
+  <div class="pred-analysis">F5 Starter: Away=7.98 Home=5.40 (diff=+2.58) → +0.65 | F5 Matchup: H_Off/A_Def=1.14 A_Off/H_Def=0.91 → +0.15 | Home Field: +0.06 | Momentum: H=0.70 A=0.40 → +0.15 | H2H: 3-7 (10g) → -0.15</div>
+</div>
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Tie Prob: 18.0% &nbsp;|&nbsp; Conf: 18% &nbsp;|&nbsp; Score: +0.18</div>
+  <div class="pred-analysis">Parity: Away=0.56 Home=0.67 (gap=0.11) → +0.10 | Starter Duel: Away=7.98 Home=5.40 → +0.00 | F5 Uncertainty: f5Score=+0.85 → +0.00 | F5 Winner Uncertainty: edge=+0.86 → +0.00 | L10 Run Env: avgRpG=3.85 → +0.08</div>
+</div>
+</div>
+<div class="starters">
+<span>Away SP ERA: <b>7.98</b></span>
+<span>Home SP ERA: <b>5.40</b></span>
+</div>
+<div class="ai-summary" id="summary-TEX-OAK"></div>
 </div>
 <div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">CIN @ TEX</span>
-    <span class="game-line">o/u 7.5 &nbsp;·&nbsp; F5 3.50</span>
-  </div>
-  <div class="pitcher-line">CIN SP ERA 4.57 (Chase Burns) <span class="conf-yes">✓</span> &nbsp;·&nbsp; TEX SP ERA 3.86 (Jack Leiter) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (7.5)</td>
-        <td><span class="badge over">OVER</span> <small>75% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge pass">PASS</span> <small>48% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (3.50)</td>
-        <td><span class="badge over">OVER</span> <small>85% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge lean-home">LN HOME</span> <small>66% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">CIN 2-0 (L10: 5-5) &nbsp;·&nbsp; TEX 0-2 (L10: 4-6)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">CIN 3O-4U (L10: 5O-4U) &nbsp;·&nbsp; TEX 4O-2U (L10: 5O-3U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 3O-6U &nbsp;·&nbsp; TEX wins 2-3</span>
-    </div>
-  </div>
-
-  
+<div class="matchup">NYM @ LAD</div>
+<div class="venue">UNIQLO Field at Dodger Stadium</div>
+<div class="lines">
+<span>Game O/U: <b>8.5</b></span>
+<span>F5 O/U: <b>4.5</b></span>
+<span>ML: Away +145 / Home -170</span>
 </div>
-<div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">PHI @ COL</span>
-    <span class="game-line">o/u 11.0 &nbsp;·&nbsp; F5 6.50</span>
-  </div>
-  <div class="pitcher-line">PHI SP ERA 4.08 (Taijuan Walker) <span class="conf-yes">✓</span> &nbsp;·&nbsp; COL SP ERA 4.64 (Tomoyuki Sugano) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (11.0)</td>
-        <td><span class="badge under">UNDER</span> <small>21% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge away">AWAY</span> <small>18% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (6.50)</td>
-        <td><span class="badge under">UNDER</span> <small>25% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge away">AWAY</span> <small>19% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">PHI 2-0 (L10: 6-4) &nbsp;·&nbsp; COL 0-2 (L10: 2-8)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">PHI 5O-2U (L10: 6O-3U) &nbsp;·&nbsp; COL 2O-6U (L10: 2O-8U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 3O-7U &nbsp;·&nbsp; COL wins 1-6</span>
-    </div>
-  </div>
-
-  
+<div class="predictions">
+<div class="pred-block">
+  <div class="pred-label">Game Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 80.6% &nbsp;|&nbsp; Conf: 48% &nbsp;|&nbsp; Score: +0.95</div>
+  <div class="pred-analysis">Proj: 9.38 vs 8.5 (diff=+0.88) → +0.45 | Synergy: AwayO=3.88 HomeO=6.07 AwayERA=6.14 HomeERA=4.00 → +0.00 | Season O/U: Away=7-7 (0.50) Home=8-7 (0.53) → +0.00 | L10 O/U: Away=6-2 (0.70) Home=6-4 (0.60) → +0.20 | L10 Run Env: 9.80 vs line 8.5 → +0.15 | H2H: 5-5 (10g, avgRuns=10.4) → +0.15</div>
 </div>
-<div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">HOU @ ATH</span>
-    <span class="game-line">o/u 10.0 &nbsp;·&nbsp; F5 5.50</span>
-  </div>
-  <div class="pitcher-line">HOU SP ERA 6.51 (Lance McCullers Jr.) <span class="conf-yes">✓</span> &nbsp;·&nbsp; ATH SP ERA 4.08 (Jacob Lopez) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (10.0)</td>
-        <td><span class="badge over">OVER</span> <small>74% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge away">AWAY</span> <small>10% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (5.50)</td>
-        <td><span class="badge over">OVER</span> <small>73% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge away">AWAY</span> <small>21% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">HOU 1-1 (L10: 7-3) &nbsp;·&nbsp; ATH 1-1 (L10: 2-8)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">HOU 7O-2U (L10: 7O-3U) &nbsp;·&nbsp; ATH 3O-5U (L10: 4O-6U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 5O-5U &nbsp;·&nbsp; ATH wins 4-2</span>
-    </div>
-  </div>
-
-  
+<div class="pred-block">
+  <div class="pred-label">Game Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 97.3% &nbsp;|&nbsp; Conf: 100% &nbsp;|&nbsp; Score: +2.00</div>
+  <div class="pred-analysis">Net R: H=+2.34 A=-0.18 → +1.13 | Matchup: H_Off/A_Def=1.50 A_Off/H_Def=1.04 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=6.14 Home=4.00 (diff=+2.14) → +0.50 | Momentum: H=0.70 (7-3) A=0.40 (4-6) → +0.30 | Season: H=6-3 (0.67) A=4-3 (0.57) → +0.00 | H2H Winner: 5-5 (10g) → +0.00</div>
 </div>
-<div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">NYM @ SF</span>
-    <span class="game-line">o/u 7.0 &nbsp;·&nbsp; F5 3.50</span>
-  </div>
-  <div class="pitcher-line">NYM SP ERA 3.02 (Kodai Senga) <span class="conf-yes">✓</span> &nbsp;·&nbsp; SF SP ERA 3.22 (Logan Webb) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (7.0)</td>
-        <td><span class="badge pass">PASS</span> <small>57% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge away">AWAY</span> <small>3% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (3.50)</td>
-        <td><span class="badge lean-over">LN OVER</span> <small>61% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge away">AWAY</span> <small>8% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">NYM 3-3 (L10: 5-5) &nbsp;·&nbsp; SF 1-5 (L10: 4-6)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">NYM 4O-5U (L10: 4O-6U) &nbsp;·&nbsp; SF 4O-3U (L10: 4O-4U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 6O-3U &nbsp;·&nbsp; SF wins 1-5</span>
-    </div>
-  </div>
-
-  
+<div class="pred-block">
+  <div class="pred-label">F5 Total</div>
+  <div class="pred-decision decision-bet">OVER</div>
+  <div class="pred-stats">Over: 83.9% &nbsp;|&nbsp; Conf: 55% &nbsp;|&nbsp; Score: +1.10</div>
+  <div class="pred-analysis">F5 Proj: 5.23 vs 4.5 (diff=+0.73) → +0.45 | ERA Quality: Away=6.14 Home=4.00 avg=5.07 → +0.30 | L10 O/U: Away=0.70 Home=0.60 → +0.15 | H2H F5 Est: 5.72 vs 4.5 → +0.20</div>
 </div>
-<div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">SEA @ LAA</span>
-    <span class="game-line">o/u 9.0 &nbsp;·&nbsp; F5 5.50</span>
-  </div>
-  <div class="pitcher-line">SEA SP ERA 3.54 (Luis Castillo) <span class="conf-yes">✓</span> &nbsp;·&nbsp; LAA SP ERA 7.36 (Ryan Johnson) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (9.0)</td>
-        <td><span class="badge under">UNDER</span> <small>21% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge away">AWAY</span> <small>11% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (5.50)</td>
-        <td><span class="badge under">UNDER</span> <small>25% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge away">AWAY</span> <small>22% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">SEA 1-1 (L10: 4-6) &nbsp;·&nbsp; LAA 1-1 (L10: 4-6)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">SEA 4O-5U (L10: 4O-6U) &nbsp;·&nbsp; LAA 3O-6U (L10: 3O-7U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 4O-6U &nbsp;·&nbsp; LAA wins 3-3</span>
-    </div>
-  </div>
-
-  
+<div class="pred-block">
+  <div class="pred-label">F5 Winner</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 86.0% &nbsp;|&nbsp; Conf: 51% &nbsp;|&nbsp; Score: +1.01</div>
+  <div class="pred-analysis">F5 Starter: Away=6.14 Home=4.00 (diff=+2.14) → +0.65 | F5 Matchup: H_Off/A_Def=1.50 A_Off/H_Def=1.04 → +0.15 | Home Field: +0.06 | Momentum: H=0.70 A=0.40 → +0.15 | H2H: 5-5 (10g) → +0.00</div>
 </div>
-<div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">ATL @ ARI</span>
-    <span class="game-line">o/u 9.5 &nbsp;·&nbsp; F5 5.50</span>
-  </div>
-  <div class="pitcher-line">ATL SP ERA 3.54 (Martín Pérez) <span class="conf-yes">✓</span> &nbsp;·&nbsp; ARI SP ERA 5.25 (Brandon Pfaadt) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (9.5)</td>
-        <td><span class="badge lean-under">LN UNDER</span> <small>37% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge away">AWAY</span> <small>3% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (5.50)</td>
-        <td><span class="badge under">UNDER</span> <small>25% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge away">AWAY</span> <small>3% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">ATL 2-1 (L10: 7-3) &nbsp;·&nbsp; ARI 4-2 (L10: 4-6)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">ATL 1O-8U (L10: 1O-9U) &nbsp;·&nbsp; ARI 5O-4U (L10: 6O-4U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 6O-4U &nbsp;·&nbsp; ARI wins 3-4</span>
-    </div>
-  </div>
-
-  
+<div class="pred-block">
+  <div class="pred-label">F5 Tie</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Tie Prob: 20.0% &nbsp;|&nbsp; Conf: 20% &nbsp;|&nbsp; Score: +0.20</div>
+  <div class="pred-analysis">Parity: Away=0.57 Home=0.67 (gap=0.10) → +0.20 | Starter Duel: Away=6.14 Home=4.00 → +0.00 | F5 Uncertainty: f5Score=+1.10 → +0.00 | F5 Winner Uncertainty: edge=+1.01 → +0.00 | L10 Run Env: avgRpG=5.40 → +0.00</div>
 </div>
-<div class="game-card">
-  <div class="game-header">
-    <span class="game-matchup">STL @ DET</span>
-    <span class="game-line">o/u 8.0 &nbsp;·&nbsp; F5 4.50</span>
-  </div>
-  <div class="pitcher-line">STL SP ERA 3.07 (Kyle Leahy) <span class="conf-yes">✓</span> &nbsp;·&nbsp; DET SP ERA 4.37 (Keider Montero) <span class="conf-yes">✓</span></div>
-  <table class="picks-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Pick</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="market-label">Total (8.0)</td>
-        <td><span class="badge over">OVER</span> <small>66% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">Winner</td>
-        <td><span class="badge home">HOME</span> <small>94% home</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 (4.50)</td>
-        <td><span class="badge pass">PASS</span> <small>46% over</small></td>
-      </tr>
-      <tr>
-        <td class="market-label">F5 Winner</td>
-        <td><span class="badge home">HOME</span> <small>72% home</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="forecast-panel">
-    <div class="fp-title">Forecast Panel</div>
-    <div class="fp-row">
-      <span class="fp-label">Record</span>
-      <span class="fp-value">STL 0-2 (L10: 4-6) &nbsp;·&nbsp; DET 2-0 (L10: 5-5)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">O/U Trend</span>
-      <span class="fp-value">STL 4O-4U (L10: 5O-5U) &nbsp;·&nbsp; DET 4O-4U (L10: 5O-5U)</span>
-    </div>
-    <div class="fp-row">
-      <span class="fp-label">H2H</span>
-      <span class="fp-value">Totals 6O-4U &nbsp;·&nbsp; DET wins 4-1</span>
-    </div>
-  </div>
-
-  
-</div></div>
-<div class="slate-container"><h2>📋 Daily Betting Slate</h2>
-<p class="no-bets">No actionable bets today — all markets below edge threshold.</p>
 </div>
+<div class="starters">
+<span>Away SP ERA: <b>6.14</b></span>
+<span>Home SP ERA: <b>4.00</b></span>
+</div>
+<div class="ai-summary" id="summary-NYM-LAD"></div>
+</div>
+<footer>Generated by BaseballModel V1 &nbsp;|&nbsp; Not financial advice</footer>
 </body></html>
