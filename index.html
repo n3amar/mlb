@@ -53,6 +53,17 @@
   .result-p .res-badge { color: #888; }
   .prev-total td { font-weight: bold; color: #fff; border-top: 1px solid #2a2d3e; padding-top: 8px; }
   .prev-note { font-size: 0.72em; color: #555; margin-top: 6px; }
+  /* Park / weather context strip */
+  .park-context { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .park-badge { font-size: 0.76em; padding: 3px 9px; border-radius: 12px; font-weight: 500; background: #1e2130; color: #888; }
+  .park-hitter { background: #1b3a1b; color: #81c784; }
+  .park-pitcher { background: #3a1b1b; color: #e57373; }
+  .park-neutral { background: #1e2130; color: #888; }
+  .park-dome    { background: #1e2130; color: #78909c; }
+  .temp-cold { color: #90caf9; }
+  .temp-hot  { color: #ffb74d; }
+  .wind-out { background: #1b2d20; color: #a5d6a7; }
+  .wind-in  { background: #2d1b1b; color: #ef9a9a; }
 </style>
 </head>
 <body>
@@ -107,27 +118,27 @@
 <div class="matchup">ATL @ WSN</div>
 <div class="venue">Nationals Park</div>
 <div class="lines">
-<span>Game O/U: <b>9.5</b></span>
+<span>Game O/U: <b>9</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away -10000 / Home +3300</span>
 </div>
+<div class="park-context"><span class="park-badge park-neutral">PF 98</span><span class="park-badge ">80°F</span><span class="park-badge ">5mph Calm</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
   <div class="pred-decision decision-bet">OVER</div>
-  <div class="pred-stats">Over: 81.8% &nbsp;|&nbsp; Conf: 50% &nbsp;|&nbsp; Score: +1.00 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $14.50</span></div>
-  <div class="pred-analysis">Proj: 9.33 vs 9.5 (diff=-0.17) → +0.00 | Synergy: AwayO=5.77 HomeO=5.54 AwayERA=3.63 HomeERA=4.01 → +0.15 | Season O/U: Away=12-12 (0.50) Home=18-7 (0.72) → +0.15 | L10 O/U: Away=6-3 (0.65) Home=7-3 (0.70) → +0.20 | L10 Run Env: 11.45 vs line 9.5 → +0.25 | H2H: 2-8 (10g, avgRuns=11.1) → +0.25</div>
+  <div class="pred-stats">Over: 86.7% &nbsp;|&nbsp; Conf: 63% &nbsp;|&nbsp; Score: +1.25 &nbsp;|&nbsp; <span class="kelly">risk $4.36 &rarr; win $3.96</span></div>
+  <div class="pred-analysis">Proj: 9.33 vs 9 (diff=+0.33) → +0.25 | Synergy: AwayO=5.77 HomeO=5.54 AwayERA=3.63 HomeERA=4.01 → +0.15 | Season O/U: Away=12-12 (0.50) Home=18-7 (0.72) → +0.15 | L10 O/U: Away=6-3 (0.65) Home=7-3 (0.70) → +0.20 | L10 Run Env: 11.45 vs line 9 → +0.25 | H2H: 2-8 (10g, avgRuns=11.1) → +0.25</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
   <div class="pred-decision decision-bet decision-away">AWAY</div>
-  <div class="pred-stats">Home Win: 3.1% &nbsp;|&nbsp; Conf: 95% &nbsp;|&nbsp; Score: -1.91</div>
+  <div class="pred-stats">Home Win: 3.1% &nbsp;|&nbsp; Conf: 95% &nbsp;|&nbsp; Score: -1.91 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
   <div class="pred-analysis">Net R: H=-0.69 A=+2.39 → -1.39 | Matchup: H_Off/A_Def=1.64 A_Off/H_Def=0.93 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=3.63 Home=4.01 (diff=-0.38) → -0.10 | Momentum: H=0.40 (4-6) A=0.80 (8-2) → -0.30 | Season: H=3-9 (0.25) A=9-4 (0.69) → -0.25 | H2H Winner: 2-8 (10g) → -0.20</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
   <div class="pred-decision decision-bet">OVER</div>
-  <div class="pred-stats">Over: 71.1% &nbsp;|&nbsp; Conf: 30% &nbsp;|&nbsp; Score: +0.60 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $14.50</span></div>
+  <div class="pred-stats">Over: 71.1% &nbsp;|&nbsp; Conf: 30% &nbsp;|&nbsp; Score: +0.60 &nbsp;|&nbsp; <span class="kelly">risk $2.28 &rarr; win $2.07</span></div>
   <div class="pred-analysis">F5 Proj: 4.98 vs 4.5 (diff=+0.48) → +0.25 | ERA Quality: Away=3.63 Home=4.01 avg=3.82 → +0.00 | L10 O/U: Away=0.65 Home=0.70 → +0.15 | H2H F5 Est: 6.11 vs 4.5 → +0.20</div>
 </div>
 <div class="pred-block">
@@ -144,8 +155,8 @@
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>3.63</b></span>
-<span>Home SP ERA: <b>4.01</b></span>
+<span>Away SP: <b>3.63 ERA</b> · 7.0 ip/gs</span>
+<span>Home SP: <b>4.01 ERA</b> · 4.1 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-ATL-WSN"></div>
 </div>
@@ -153,28 +164,28 @@
 <div class="matchup">MIL @ DET</div>
 <div class="venue">Comerica Park</div>
 <div class="lines">
-<span>Game O/U: <b>9.5</b></span>
+<span>Game O/U: <b>9</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away -100 / Home -125</span>
 </div>
+<div class="park-context"><span class="park-badge park-neutral">PF 97</span><span class="park-badge ">74°F</span><span class="park-badge wind-out">5mph Out to CF</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
-  <div class="pred-decision decision-lean decision-away">LEAN UNDER</div>
-  <div class="pred-stats">Over: 40.7% &nbsp;|&nbsp; Conf: 13% &nbsp;|&nbsp; Score: -0.25</div>
-  <div class="pred-analysis">Proj: 8.94 vs 9.5 (diff=-0.56) → -0.25 | Synergy: AwayO=5.17 HomeO=4.35 AwayERA=6.45 HomeERA=2.72 → +0.00 | Season O/U: Away=13-10 (0.57) Home=11-12 (0.48) → +0.15 | L10 O/U: Away=5-5 (0.50) Home=5-5 (0.50) → +0.00 | L10 Run Env: 8.80 vs line 9.5 → -0.15 | H2H: 4-6 (10g, avgRuns=9.0) → +0.00</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 55.6% &nbsp;|&nbsp; Conf: 8% &nbsp;|&nbsp; Score: +0.15</div>
+  <div class="pred-analysis">Proj: 8.96 vs 9 (diff=-0.04) → +0.00 | Synergy: AwayO=5.17 HomeO=4.38 AwayERA=6.45 HomeERA=2.72 → +0.00 | Season O/U: Away=13-10 (0.57) Home=11-12 (0.48) → +0.15 | L10 O/U: Away=5-5 (0.50) Home=5-5 (0.50) → +0.00 | L10 Run Env: 8.80 vs line 9 → +0.00 | H2H: 4-6 (10g, avgRuns=9.0) → +0.00</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
   <div class="pred-decision decision-lean">LEAN HOME</div>
-  <div class="pred-stats">Home Win: 68.9% &nbsp;|&nbsp; Conf: 22% &nbsp;|&nbsp; Score: +0.44</div>
-  <div class="pred-analysis">Net R: H=+0.47 A=+1.00 → -0.24 | Matchup: H_Off/A_Def=1.04 A_Off/H_Def=1.33 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=6.45 Home=2.72 (diff=+3.73) → +0.50 | Momentum: H=0.70 (7-3) A=0.50 (5-5) → +0.20 | Season: H=9-2 (0.82) A=6-5 (0.55) → +0.25 | H2H Winner: 4-6 (10g) → -0.10</div>
+  <div class="pred-stats">Home Win: 70.1% &nbsp;|&nbsp; Conf: 24% &nbsp;|&nbsp; Score: +0.47</div>
+  <div class="pred-analysis">Net R: H=+0.50 A=+0.96 → -0.21 | Matchup: H_Off/A_Def=1.04 A_Off/H_Def=1.33 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=6.45 Home=2.72 (diff=+3.73) → +0.50 | Momentum: H=0.70 (7-3) A=0.50 (5-5) → +0.20 | Season: H=9-2 (0.82) A=6-5 (0.55) → +0.25 | H2H Winner: 4-6 (10g) → -0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
   <div class="pred-decision decision-bet">OVER</div>
-  <div class="pred-stats">Over: 69.5% &nbsp;|&nbsp; Conf: 28% &nbsp;|&nbsp; Score: +0.55 &nbsp;|&nbsp; <span class="kelly">risk $2.48 &rarr; win $2.48</span></div>
-  <div class="pred-analysis">F5 Proj: 4.94 vs 4.5 (diff=+0.44) → +0.25 | ERA Quality: Away=6.45 Home=2.72 avg=4.59 → +0.20 | L10 O/U: Away=0.50 Home=0.50 → +0.00 | H2H F5 Est: 4.95 vs 4.5 → +0.10</div>
+  <div class="pred-stats">Over: 69.5% &nbsp;|&nbsp; Conf: 28% &nbsp;|&nbsp; Score: +0.55 &nbsp;|&nbsp; <span class="kelly">risk $2.07 &rarr; win $1.88</span></div>
+  <div class="pred-analysis">F5 Proj: 4.95 vs 4.5 (diff=+0.45) → +0.25 | ERA Quality: Away=6.45 Home=2.72 avg=4.59 → +0.20 | L10 O/U: Away=0.50 Home=0.50 → +0.00 | H2H F5 Est: 4.95 vs 4.5 → +0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Winner</div>
@@ -190,8 +201,8 @@
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>6.45</b></span>
-<span>Home SP ERA: <b>2.72</b></span>
+<span>Away SP: <b>6.45 ERA</b> · 7.4 ip/gs</span>
+<span>Home SP: <b>2.72 ERA</b> · 6.1 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-MIL-DET"></div>
 </div>
@@ -199,45 +210,45 @@
 <div class="matchup">PHI @ CHC</div>
 <div class="venue">Wrigley Field</div>
 <div class="lines">
-<span>Game O/U: <b>11.5</b></span>
+<span>Game O/U: <b>9</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away +610 / Home -1135</span>
 </div>
+<div class="park-context"><span class="park-badge park-neutral">PF 102</span><span class="park-badge ">76°F</span><span class="park-badge ">10mph Cross</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
-  <div class="pred-decision decision-bet decision-away">UNDER</div>
-  <div class="pred-stats">Over: 24.5% &nbsp;|&nbsp; Conf: 38% &nbsp;|&nbsp; Score: -0.75 &nbsp;|&nbsp; <span class="kelly">risk $2.50 &rarr; win $2.08</span></div>
-  <div class="pred-analysis">Proj: 7.53 vs 11.5 (diff=-3.97) → -1.00 | Synergy: AwayO=3.36 HomeO=5.44 AwayERA=2.78 HomeERA=2.60 → -0.20 | Season O/U: Away=12-11 (0.52) Home=14-10 (0.58) → +0.15 | L10 O/U: Away=5-5 (0.50) Home=7-3 (0.70) → +0.20 | L10 Run Env: 10.50 vs line 11.5 → -0.15 | H2H: 6-4 (10g, avgRuns=10.5) → +0.25</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 53.7% &nbsp;|&nbsp; Conf: 5% &nbsp;|&nbsp; Score: +0.10</div>
+  <div class="pred-analysis">Proj: 7.84 vs 9 (diff=-1.16) → -0.45 | Synergy: AwayO=3.56 HomeO=5.56 AwayERA=2.94 HomeERA=2.73 → -0.20 | Season O/U: Away=12-11 (0.52) Home=14-10 (0.58) → +0.15 | L10 O/U: Away=5-5 (0.50) Home=7-3 (0.70) → +0.20 | L10 Run Env: 10.50 vs line 9 → +0.15 | H2H: 6-4 (10g, avgRuns=10.5) → +0.25</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
   <div class="pred-decision decision-bet">HOME</div>
-  <div class="pred-stats">Home Win: 97.3% &nbsp;|&nbsp; Conf: 100% &nbsp;|&nbsp; Score: +2.00</div>
-  <div class="pred-analysis">Net R: H=+1.80 A=-2.12 → +1.76 | Matchup: H_Off/A_Def=0.99 A_Off/H_Def=0.92 → +0.00 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=2.78 Home=2.60 (diff=+0.18) → +0.00 | Momentum: H=0.90 (9-1) A=0.10 (1-9) → +0.45 | Season: H=10-5 (0.67) A=3-6 (0.33) → +0.25 | H2H Winner: 6-4 (10g) → +0.10</div>
+  <div class="pred-stats">Home Win: 97.3% &nbsp;|&nbsp; Conf: 100% &nbsp;|&nbsp; Score: +2.00 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
+  <div class="pred-analysis">Net R: H=+1.72 A=-2.04 → +1.69 | Matchup: H_Off/A_Def=0.99 A_Off/H_Def=0.93 → +0.00 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=2.94 Home=2.73 (diff=+0.21) → +0.00 | Momentum: H=0.90 (9-1) A=0.10 (1-9) → +0.45 | Season: H=10-5 (0.67) A=3-6 (0.33) → +0.25 | H2H Winner: 6-4 (10g) → +0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
   <div class="pred-decision decision-pass">PASS</div>
-  <div class="pred-stats">Over: 42.6% &nbsp;|&nbsp; Conf: 10% &nbsp;|&nbsp; Score: -0.20</div>
-  <div class="pred-analysis">F5 Proj: 3.94 vs 4.5 (diff=-0.56) → -0.25 | ERA Quality: Away=2.78 Home=2.60 avg=2.69 → -0.30 | L10 O/U: Away=0.50 Home=0.70 → +0.15 | H2H F5 Est: 5.78 vs 4.5 → +0.20</div>
+  <div class="pred-stats">Over: 46.3% &nbsp;|&nbsp; Conf: 5% &nbsp;|&nbsp; Score: -0.10</div>
+  <div class="pred-analysis">F5 Proj: 4.11 vs 4.5 (diff=-0.39) → -0.25 | ERA Quality: Away=2.94 Home=2.73 avg=2.84 → -0.20 | L10 O/U: Away=0.50 Home=0.70 → +0.15 | H2H F5 Est: 5.78 vs 4.5 → +0.20</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Winner</div>
   <div class="pred-decision decision-lean">LEAN HOME</div>
   <div class="pred-stats">Home Win: 67.7% &nbsp;|&nbsp; Conf: 21% &nbsp;|&nbsp; Score: +0.41</div>
-  <div class="pred-analysis">F5 Starter: Away=2.78 Home=2.60 (diff=+0.18) → +0.00 | F5 Matchup: H_Off/A_Def=0.99 A_Off/H_Def=0.92 → +0.00 | Home Field: +0.06 | Momentum: H=0.90 A=0.10 → +0.25 | H2H: 6-4 (10g) → +0.10</div>
+  <div class="pred-analysis">F5 Starter: Away=2.94 Home=2.73 (diff=+0.21) → +0.00 | F5 Matchup: H_Off/A_Def=0.99 A_Off/H_Def=0.93 → +0.00 | Home Field: +0.06 | Momentum: H=0.90 A=0.10 → +0.25 | H2H: 6-4 (10g) → +0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Tie</div>
-  <div class="pred-decision decision-pass">LEAN TIE</div>
-  <div class="pred-stats">Tie Prob: 45.0% &nbsp;|&nbsp; Conf: 45% &nbsp;|&nbsp; Score: +0.45</div>
-  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.33 Home=0.67 (gap=0.33) → +0.00 | Starter Duel: Away=2.78 Home=2.60 → +0.30 | F5 Uncertainty: f5Score=-0.20 → +0.15 | F5 Winner Uncertainty: edge=+0.41 → +0.00 | L10 Run Env: avgRpG=5.20 → +0.00</div>
+  <div class="pred-decision decision-pass">BET TIE</div>
+  <div class="pred-stats">Tie Prob: 55.0% &nbsp;|&nbsp; Conf: 55% &nbsp;|&nbsp; Score: +0.55</div>
+  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.33 Home=0.67 (gap=0.33) → +0.00 | Starter Duel: Away=2.94 Home=2.73 → +0.30 | F5 Uncertainty: f5Score=-0.10 → +0.25 | F5 Winner Uncertainty: edge=+0.41 → +0.00 | L10 Run Env: avgRpG=5.20 → +0.00</div>
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>2.78</b></span>
-<span>Home SP ERA: <b>2.60</b></span>
+<span>Away SP: <b>2.94 ERA</b> · 5.6 ip/gs</span>
+<span>Home SP: <b>2.73 ERA</b> · 5.9 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-PHI-CHC"></div>
 </div>
@@ -245,45 +256,45 @@
 <div class="matchup">SDP @ COL</div>
 <div class="venue">Coors Field</div>
 <div class="lines">
-<span>Game O/U: <b>10.5</b></span>
+<span>Game O/U: <b>9</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away -105 / Home -125</span>
 </div>
+<div class="park-context"><span class="park-badge park-hitter">PF 118 ↑</span><span class="park-badge ">62°F</span><span class="park-badge wind-out">9mph Out to LF</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
-  <div class="pred-decision decision-bet decision-away">UNDER</div>
-  <div class="pred-stats">Over: 15.1% &nbsp;|&nbsp; Conf: 58% &nbsp;|&nbsp; Score: -1.15 &nbsp;|&nbsp; <span class="kelly">risk $3.96 &rarr; win $3.45</span></div>
-  <div class="pred-analysis">Proj: 9.57 vs 10.5 (diff=-0.93) → -0.45 | Synergy: AwayO=4.00 HomeO=3.88 AwayERA=6.44 HomeERA=5.61 → +0.05 | Season O/U: Away=9-14 (0.39) Home=9-16 (0.36) → -0.30 | L10 O/U: Away=3-7 (0.30) Home=4-6 (0.40) → -0.20 | L10 Run Env: 8.20 vs line 10.5 → -0.25 | H2H: 2-8 (10g, avgRuns=8.9) → +0.00</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 59.3% &nbsp;|&nbsp; Conf: 13% &nbsp;|&nbsp; Score: +0.25</div>
+  <div class="pred-analysis">Proj: 10.78 vs 9 (diff=+1.78) → +0.70 | Synergy: AwayO=4.40 HomeO=4.15 AwayERA=7.78 HomeERA=6.30 → +0.20 | Season O/U: Away=9-14 (0.39) Home=9-16 (0.36) → -0.30 | L10 O/U: Away=3-7 (0.30) Home=4-6 (0.40) → -0.20 | L10 Run Env: 8.20 vs line 9 → -0.15 | H2H: 2-8 (10g, avgRuns=8.9) → +0.00</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
   <div class="pred-decision decision-bet decision-away">AWAY</div>
-  <div class="pred-stats">Home Win: 31.6% &nbsp;|&nbsp; Conf: 21% &nbsp;|&nbsp; Score: -0.43 &nbsp;|&nbsp; <span class="kelly">risk $2.13 &rarr; win $2.03</span></div>
-  <div class="pred-analysis">Net R: H=-0.54 A=+0.48 → -0.46 | Matchup: H_Off/A_Def=1.10 A_Off/H_Def=0.90 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=6.44 Home=5.61 (diff=+0.83) → +0.20 | Momentum: H=0.40 (4-6) A=0.80 (8-2) → -0.30 | Season: H=7-5 (0.58) A=7-4 (0.64) → +0.00 | H2H Winner: 2-8 (10g) → -0.20</div>
+  <div class="pred-stats">Home Win: 31.3% &nbsp;|&nbsp; Conf: 22% &nbsp;|&nbsp; Score: -0.44</div>
+  <div class="pred-analysis">Net R: H=-0.66 A=+0.60 → -0.57 | Matchup: H_Off/A_Def=1.09 A_Off/H_Def=0.91 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=7.78 Home=6.30 (diff=+1.48) → +0.30 | Momentum: H=0.40 (4-6) A=0.80 (8-2) → -0.30 | Season: H=7-5 (0.58) A=7-4 (0.64) → +0.00 | H2H Winner: 2-8 (10g) → -0.20</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
   <div class="pred-decision decision-bet">OVER</div>
-  <div class="pred-stats">Over: 71.1% &nbsp;|&nbsp; Conf: 30% &nbsp;|&nbsp; Score: +0.60 &nbsp;|&nbsp; <span class="kelly">risk $2.08 &rarr; win $1.81</span></div>
-  <div class="pred-analysis">F5 Proj: 5.49 vs 4.5 (diff=+0.99) → +0.45 | ERA Quality: Away=6.44 Home=5.61 avg=6.03 → +0.30 | L10 O/U: Away=0.30 Home=0.40 → -0.15 | H2H F5 Est: 4.90 vs 4.5 → +0.00</div>
+  <div class="pred-stats">Over: 78.2% &nbsp;|&nbsp; Conf: 43% &nbsp;|&nbsp; Score: +0.85 &nbsp;|&nbsp; <span class="kelly">risk $3.22 &rarr; win $2.93</span></div>
+  <div class="pred-analysis">F5 Proj: 6.23 vs 4.5 (diff=+1.73) → +0.70 | ERA Quality: Away=7.78 Home=6.30 avg=7.04 → +0.30 | L10 O/U: Away=0.30 Home=0.40 → -0.15 | H2H F5 Est: 4.90 vs 4.5 → +0.00</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Winner</div>
   <div class="pred-decision decision-pass">PASS</div>
-  <div class="pred-stats">Home Win: 48.2% &nbsp;|&nbsp; Conf: 2% &nbsp;|&nbsp; Score: -0.04</div>
-  <div class="pred-analysis">F5 Starter: Away=6.44 Home=5.61 (diff=+0.83) → +0.20 | F5 Matchup: H_Off/A_Def=1.10 A_Off/H_Def=0.90 → +0.15 | Home Field: +0.06 | Momentum: H=0.40 A=0.80 → -0.25 | H2H: 2-8 (10g) → -0.20</div>
+  <div class="pred-stats">Home Win: 54.9% &nbsp;|&nbsp; Conf: 6% &nbsp;|&nbsp; Score: +0.11</div>
+  <div class="pred-analysis">F5 Starter: Away=7.78 Home=6.30 (diff=+1.48) → +0.35 | F5 Matchup: H_Off/A_Def=1.09 A_Off/H_Def=0.91 → +0.15 | Home Field: +0.06 | Momentum: H=0.40 A=0.80 → -0.25 | H2H: 2-8 (10g) → -0.20</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Tie</div>
   <div class="pred-decision decision-pass">BET TIE</div>
   <div class="pred-stats">Tie Prob: 48.0% &nbsp;|&nbsp; Conf: 48% &nbsp;|&nbsp; Score: +0.48</div>
-  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.64 Home=0.58 (gap=0.05) → +0.20 | Starter Duel: Away=6.44 Home=5.61 → +0.00 | F5 Uncertainty: f5Score=+0.60 → +0.00 | F5 Winner Uncertainty: edge=-0.04 → +0.20 | L10 Run Env: avgRpG=3.95 → +0.08</div>
+  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.64 Home=0.58 (gap=0.05) → +0.20 | Starter Duel: Away=7.78 Home=6.30 → +0.00 | F5 Uncertainty: f5Score=+0.85 → +0.00 | F5 Winner Uncertainty: edge=+0.11 → +0.20 | L10 Run Env: avgRpG=3.95 → +0.08</div>
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>6.44</b></span>
-<span>Home SP ERA: <b>5.61</b></span>
+<span>Away SP: <b>7.78 ERA</b> · 4.3 ip/gs</span>
+<span>Home SP: <b>6.30 ERA</b> · 4.0 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-SDP-COL"></div>
 </div>
@@ -291,45 +302,45 @@
 <div class="matchup">CWS @ ARI</div>
 <div class="venue">Chase Field</div>
 <div class="lines">
-<span>Game O/U: <b>8.5</b></span>
+<span>Game O/U: <b>9</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away +125 / Home -145</span>
 </div>
+<div class="park-context"><span class="park-badge park-neutral">PF 100</span><span class="park-badge park-dome">DOME</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
-  <div class="pred-decision decision-bet">OVER</div>
-  <div class="pred-stats">Over: 64.6% &nbsp;|&nbsp; Conf: 20% &nbsp;|&nbsp; Score: +0.40</div>
-  <div class="pred-analysis">Proj: 7.78 vs 8.5 (diff=-0.72) → -0.45 | Synergy: AwayO=4.17 HomeO=4.79 AwayERA=2.16 HomeERA=2.78 → -0.05 | Season O/U: Away=16-8 (0.67) Home=15-8 (0.65) → +0.30 | L10 O/U: Away=8-2 (0.80) Home=6-4 (0.60) → +0.20 | L10 Run Env: 11.45 vs line 8.5 → +0.25 | H2H: 6-4 (10g, avgRuns=10.2) → +0.15</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 55.6% &nbsp;|&nbsp; Conf: 8% &nbsp;|&nbsp; Score: +0.15</div>
+  <div class="pred-analysis">Proj: 7.53 vs 9 (diff=-1.47) → -0.70 | Synergy: AwayO=4.16 HomeO=4.64 AwayERA=2.01 HomeERA=2.60 → -0.05 | Season O/U: Away=16-8 (0.67) Home=15-8 (0.65) → +0.30 | L10 O/U: Away=8-2 (0.80) Home=6-4 (0.60) → +0.20 | L10 Run Env: 11.45 vs line 9 → +0.25 | H2H: 6-4 (10g, avgRuns=10.2) → +0.15</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
   <div class="pred-decision decision-bet">HOME</div>
-  <div class="pred-stats">Home Win: 83.0% &nbsp;|&nbsp; Conf: 44% &nbsp;|&nbsp; Score: +0.88 &nbsp;|&nbsp; <span class="kelly">risk $2.75 &rarr; win $1.89</span></div>
-  <div class="pred-analysis">Net R: H=-0.21 A=-1.21 → +0.45 | Matchup: H_Off/A_Def=0.89 A_Off/H_Def=0.83 → +0.00 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=2.16 Home=2.78 (diff=-0.62) → -0.20 | Momentum: H=0.60 (6-4) A=0.40 (4-6) → +0.20 | Season: H=8-4 (0.67) A=6-9 (0.40) → +0.25 | H2H Winner: 6-4 (10g) → +0.10</div>
+  <div class="pred-stats">Home Win: 79.5% &nbsp;|&nbsp; Conf: 38% &nbsp;|&nbsp; Score: +0.75 &nbsp;|&nbsp; <span class="kelly">risk $3.40 &rarr; win $3.10</span></div>
+  <div class="pred-analysis">Net R: H=-0.32 A=-1.04 → +0.32 | Matchup: H_Off/A_Def=0.89 A_Off/H_Def=0.84 → +0.00 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=2.01 Home=2.60 (diff=-0.59) → -0.20 | Momentum: H=0.60 (6-4) A=0.40 (4-6) → +0.20 | Season: H=8-4 (0.67) A=6-9 (0.40) → +0.25 | H2H Winner: 6-4 (10g) → +0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
   <div class="pred-decision decision-pass">PASS</div>
   <div class="pred-stats">Over: 42.6% &nbsp;|&nbsp; Conf: 10% &nbsp;|&nbsp; Score: -0.20</div>
-  <div class="pred-analysis">F5 Proj: 4.02 vs 4.5 (diff=-0.48) → -0.25 | ERA Quality: Away=2.16 Home=2.78 avg=2.47 → -0.30 | L10 O/U: Away=0.80 Home=0.60 → +0.15 | H2H F5 Est: 5.61 vs 4.5 → +0.20</div>
+  <div class="pred-analysis">F5 Proj: 3.87 vs 4.5 (diff=-0.63) → -0.25 | ERA Quality: Away=2.01 Home=2.60 avg=2.31 → -0.30 | L10 O/U: Away=0.80 Home=0.60 → +0.15 | H2H F5 Est: 5.61 vs 4.5 → +0.20</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Winner</div>
   <div class="pred-decision decision-pass">PASS</div>
   <div class="pred-stats">Home Win: 54.9% &nbsp;|&nbsp; Conf: 6% &nbsp;|&nbsp; Score: +0.11</div>
-  <div class="pred-analysis">F5 Starter: Away=2.16 Home=2.78 (diff=-0.62) → -0.20 | F5 Matchup: H_Off/A_Def=0.89 A_Off/H_Def=0.83 → +0.00 | Home Field: +0.06 | Momentum: H=0.60 A=0.40 → +0.15 | H2H: 6-4 (10g) → +0.10</div>
+  <div class="pred-analysis">F5 Starter: Away=2.01 Home=2.60 (diff=-0.59) → -0.20 | F5 Matchup: H_Off/A_Def=0.89 A_Off/H_Def=0.84 → +0.00 | Home Field: +0.06 | Momentum: H=0.60 A=0.40 → +0.15 | H2H: 6-4 (10g) → +0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Tie</div>
   <div class="pred-decision decision-pass">BET TIE</div>
   <div class="pred-stats">Tie Prob: 65.0% &nbsp;|&nbsp; Conf: 65% &nbsp;|&nbsp; Score: +0.65</div>
-  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.40 Home=0.67 (gap=0.27) → +0.00 | Starter Duel: Away=2.16 Home=2.78 → +0.30 | F5 Uncertainty: f5Score=-0.20 → +0.15 | F5 Winner Uncertainty: edge=+0.11 → +0.20 | L10 Run Env: avgRpG=5.75 → +0.00</div>
+  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.40 Home=0.67 (gap=0.27) → +0.00 | Starter Duel: Away=2.01 Home=2.60 → +0.30 | F5 Uncertainty: f5Score=-0.20 → +0.15 | F5 Winner Uncertainty: edge=+0.11 → +0.20 | L10 Run Env: avgRpG=5.75 → +0.00</div>
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>2.16</b></span>
-<span>Home SP ERA: <b>2.78</b></span>
+<span>Away SP: <b>2.01 ERA</b> · 6.3 ip/gs</span>
+<span>Home SP: <b>2.60 ERA</b> · 5.5 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-CWS-ARI"></div>
 </div>
@@ -337,45 +348,45 @@
 <div class="matchup">LAD @ SFG</div>
 <div class="venue">Oracle Park</div>
 <div class="lines">
-<span>Game O/U: <b>7.5</b></span>
+<span>Game O/U: <b>9</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away -155 / Home +130</span>
 </div>
+<div class="park-context"><span class="park-badge park-pitcher">PF 93 ↓</span><span class="park-badge ">64°F</span><span class="park-badge ">2mph Calm</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
-  <div class="pred-decision decision-pass">PASS</div>
-  <div class="pred-stats">Over: 53.7% &nbsp;|&nbsp; Conf: 5% &nbsp;|&nbsp; Score: +0.10</div>
-  <div class="pred-analysis">Proj: 8.26 vs 7.5 (diff=+0.76) → +0.45 | Synergy: AwayO=5.58 HomeO=3.38 AwayERA=3.24 HomeERA=5.10 → +0.00 | Season O/U: Away=11-13 (0.46) Home=10-11 (0.48) → +0.00 | L10 O/U: Away=3-7 (0.30) Home=4-6 (0.40) → -0.20 | L10 Run Env: 7.35 vs line 7.5 → +0.00 | H2H: 4-6 (10g, avgRuns=8.0) → -0.15</div>
+  <div class="pred-decision decision-bet decision-away">UNDER</div>
+  <div class="pred-stats">Over: 10.2% &nbsp;|&nbsp; Conf: 73% &nbsp;|&nbsp; Score: -1.45 &nbsp;|&nbsp; <span class="kelly">risk $4.77 &rarr; win $4.34</span></div>
+  <div class="pred-analysis">Proj: 7.72 vs 9 (diff=-1.28) → -0.70 | Synergy: AwayO=5.48 HomeO=3.24 AwayERA=2.45 HomeERA=4.86 → -0.15 | Season O/U: Away=11-13 (0.46) Home=10-11 (0.48) → +0.00 | L10 O/U: Away=3-7 (0.30) Home=4-6 (0.40) → -0.20 | L10 Run Env: 7.35 vs line 9 → -0.25 | H2H: 4-6 (10g, avgRuns=8.0) → -0.15</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
   <div class="pred-decision decision-bet decision-away">AWAY</div>
-  <div class="pred-stats">Home Win: 2.7% &nbsp;|&nbsp; Conf: 100% &nbsp;|&nbsp; Score: -2.00 &nbsp;|&nbsp; <span class="kelly">risk $4.75 &rarr; win $3.06</span></div>
-  <div class="pred-analysis">Net R: H=-0.66 A=+2.16 → -1.27 | Matchup: H_Off/A_Def=0.99 A_Off/H_Def=1.38 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=3.24 Home=5.10 (diff=-1.86) → -0.40 | Momentum: H=0.50 (5-5) A=0.50 (5-5) → +0.00 | Season: H=5-7 (0.42) A=7-5 (0.58) → -0.15 | H2H Winner: 4-6 (10g) → -0.10</div>
+  <div class="pred-stats">Home Win: 2.7% &nbsp;|&nbsp; Conf: 100% &nbsp;|&nbsp; Score: -2.00 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
+  <div class="pred-analysis">Net R: H=-0.76 A=+2.20 → -1.33 | Matchup: H_Off/A_Def=0.99 A_Off/H_Def=1.37 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=2.45 Home=4.86 (diff=-2.41) → -0.50 | Momentum: H=0.50 (5-5) A=0.50 (5-5) → +0.00 | Season: H=5-7 (0.42) A=7-5 (0.58) → -0.15 | H2H Winner: 4-6 (10g) → -0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
   <div class="pred-decision decision-pass">PASS</div>
-  <div class="pred-stats">Over: 48.1% &nbsp;|&nbsp; Conf: 3% &nbsp;|&nbsp; Score: -0.05</div>
-  <div class="pred-analysis">F5 Proj: 4.55 vs 4.5 (diff=+0.05) → +0.00 | ERA Quality: Away=3.24 Home=5.10 avg=4.17 → +0.10 | L10 O/U: Away=0.30 Home=0.40 → -0.15 | H2H F5 Est: 4.40 vs 4.5 → +0.00</div>
+  <div class="pred-stats">Over: 44.4% &nbsp;|&nbsp; Conf: 8% &nbsp;|&nbsp; Score: -0.15</div>
+  <div class="pred-analysis">F5 Proj: 4.21 vs 4.5 (diff=-0.29) → +0.00 | ERA Quality: Away=2.45 Home=4.86 avg=3.66 → +0.00 | L10 O/U: Away=0.30 Home=0.40 → -0.15 | H2H F5 Est: 4.40 vs 4.5 → +0.00</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Winner</div>
   <div class="pred-decision decision-bet decision-away">AWAY</div>
-  <div class="pred-stats">Home Win: 22.4% &nbsp;|&nbsp; Conf: 35% &nbsp;|&nbsp; Score: -0.69 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
-  <div class="pred-analysis">F5 Starter: Away=3.24 Home=5.10 (diff=-1.86) → -0.50 | F5 Matchup: H_Off/A_Def=0.99 A_Off/H_Def=1.38 → -0.15 | Home Field: +0.06 | Momentum: H=0.50 A=0.50 → +0.00 | H2H: 4-6 (10g) → -0.10</div>
+  <div class="pred-stats">Home Win: 18.1% &nbsp;|&nbsp; Conf: 42% &nbsp;|&nbsp; Score: -0.84 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
+  <div class="pred-analysis">F5 Starter: Away=2.45 Home=4.86 (diff=-2.41) → -0.65 | F5 Matchup: H_Off/A_Def=0.99 A_Off/H_Def=1.37 → -0.15 | Home Field: +0.06 | Momentum: H=0.50 A=0.50 → +0.00 | H2H: 4-6 (10g) → -0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Tie</div>
   <div class="pred-decision decision-pass">LEAN TIE</div>
-  <div class="pred-stats">Tie Prob: 43.0% &nbsp;|&nbsp; Conf: 43% &nbsp;|&nbsp; Score: +0.43</div>
-  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.58 Home=0.42 (gap=0.17) → +0.00 | Starter Duel: Away=3.24 Home=5.10 → +0.10 | F5 Uncertainty: f5Score=-0.05 → +0.25 | F5 Winner Uncertainty: edge=-0.69 → +0.00 | L10 Run Env: avgRpG=3.95 → +0.08</div>
+  <div class="pred-stats">Tie Prob: 33.0% &nbsp;|&nbsp; Conf: 33% &nbsp;|&nbsp; Score: +0.33</div>
+  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.58 Home=0.42 (gap=0.17) → +0.00 | Starter Duel: Away=2.45 Home=4.86 → +0.10 | F5 Uncertainty: f5Score=-0.15 → +0.15 | F5 Winner Uncertainty: edge=-0.84 → +0.00 | L10 Run Env: avgRpG=3.95 → +0.08</div>
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>3.24</b></span>
-<span>Home SP ERA: <b>5.10</b></span>
+<span>Away SP: <b>2.45 ERA</b> · 6.6 ip/gs</span>
+<span>Home SP: <b>4.86 ERA</b> · 6.2 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-LAD-SFG"></div>
 </div>
@@ -383,45 +394,45 @@
 <div class="matchup">NYY @ BOS</div>
 <div class="venue">Fenway Park</div>
 <div class="lines">
-<span>Game O/U: <b>7.5</b></span>
+<span>Game O/U: <b>9</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away -140 / Home +120</span>
 </div>
+<div class="park-context"><span class="park-badge park-hitter">PF 106 ↑</span><span class="park-badge ">54°F</span><span class="park-badge wind-in">10mph In from CF</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
-  <div class="pred-decision decision-lean decision-away">LEAN UNDER</div>
-  <div class="pred-stats">Over: 37.2% &nbsp;|&nbsp; Conf: 18% &nbsp;|&nbsp; Score: -0.35</div>
-  <div class="pred-analysis">Proj: 7.47 vs 7.5 (diff=-0.03) → +0.00 | Synergy: AwayO=4.92 HomeO=3.75 AwayERA=1.95 HomeERA=4.20 → +0.00 | Season O/U: Away=9-14 (0.39) Home=12-12 (0.50) → -0.15 | L10 O/U: Away=4-6 (0.40) Home=5-5 (0.50) → -0.20 | L10 Run Env: 9.45 vs line 7.5 → +0.25 | H2H: 3-7 (10g, avgRuns=6.9) → -0.25</div>
+  <div class="pred-decision decision-bet decision-away">UNDER</div>
+  <div class="pred-stats">Over: 12.5% &nbsp;|&nbsp; Conf: 65% &nbsp;|&nbsp; Score: -1.30 &nbsp;|&nbsp; <span class="kelly">risk $4.47 &rarr; win $4.07</span></div>
+  <div class="pred-analysis">Proj: 7.02 vs 9 (diff=-1.98) → -0.70 | Synergy: AwayO=4.88 HomeO=3.68 AwayERA=1.77 HomeERA=3.39 → +0.00 | Season O/U: Away=9-14 (0.39) Home=12-12 (0.50) → -0.15 | L10 O/U: Away=4-6 (0.40) Home=5-5 (0.50) → -0.20 | L10 Run Env: 9.45 vs line 9 → +0.00 | H2H: 3-7 (10g, avgRuns=6.9) → -0.25</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
   <div class="pred-decision decision-bet decision-away">AWAY</div>
-  <div class="pred-stats">Home Win: 3.2% &nbsp;|&nbsp; Conf: 95% &nbsp;|&nbsp; Score: -1.90 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $3.57</span></div>
-  <div class="pred-analysis">Net R: H=-0.83 A=+1.46 → -1.03 | Matchup: H_Off/A_Def=1.08 A_Off/H_Def=1.07 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=1.95 Home=4.20 (diff=-2.25) → -0.50 | Momentum: H=0.40 (4-6) A=0.70 (7-3) → -0.30 | Season: H=5-7 (0.42) A=7-4 (0.64) → -0.25 | H2H Winner: 3-7 (10g) → -0.15</div>
+  <div class="pred-stats">Home Win: 3.6% &nbsp;|&nbsp; Conf: 92% &nbsp;|&nbsp; Score: -1.83 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
+  <div class="pred-analysis">Net R: H=-0.88 A=+1.48 → -1.06 | Matchup: H_Off/A_Def=1.08 A_Off/H_Def=1.07 → +0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=1.77 Home=3.39 (diff=-1.62) → -0.40 | Momentum: H=0.40 (4-6) A=0.70 (7-3) → -0.30 | Season: H=5-7 (0.42) A=7-4 (0.64) → -0.25 | H2H Winner: 3-7 (10g) → -0.15</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
   <div class="pred-decision decision-bet decision-away">UNDER</div>
-  <div class="pred-stats">Over: 25.9% &nbsp;|&nbsp; Conf: 35% &nbsp;|&nbsp; Score: -0.70 &nbsp;|&nbsp; <span class="kelly">risk $2.68 &rarr; win $2.44</span></div>
-  <div class="pred-analysis">F5 Proj: 3.99 vs 4.5 (diff=-0.51) → -0.25 | ERA Quality: Away=1.95 Home=4.20 avg=3.08 → -0.20 | L10 O/U: Away=0.40 Home=0.50 → -0.15 | H2H F5 Est: 3.80 vs 4.5 → -0.10</div>
+  <div class="pred-stats">Over: 18.2% &nbsp;|&nbsp; Conf: 50% &nbsp;|&nbsp; Score: -1.00 &nbsp;|&nbsp; <span class="kelly">risk $3.70 &rarr; win $3.36</span></div>
+  <div class="pred-analysis">F5 Proj: 3.69 vs 4.5 (diff=-0.81) → -0.45 | ERA Quality: Away=1.77 Home=3.39 avg=2.58 → -0.30 | L10 O/U: Away=0.40 Home=0.50 → -0.15 | H2H F5 Est: 3.80 vs 4.5 → -0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Winner</div>
   <div class="pred-decision decision-bet decision-away">AWAY</div>
-  <div class="pred-stats">Home Win: 20.9% &nbsp;|&nbsp; Conf: 37% &nbsp;|&nbsp; Score: -0.74 &nbsp;|&nbsp; <span class="kelly">risk $4.51 &rarr; win $4.10</span></div>
-  <div class="pred-analysis">F5 Starter: Away=1.95 Home=4.20 (diff=-2.25) → -0.65 | F5 Matchup: H_Off/A_Def=1.08 A_Off/H_Def=1.07 → +0.15 | Home Field: +0.06 | Momentum: H=0.40 A=0.70 → -0.15 | H2H: 3-7 (10g) → -0.15</div>
+  <div class="pred-stats">Home Win: 25.7% &nbsp;|&nbsp; Conf: 30% &nbsp;|&nbsp; Score: -0.59 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
+  <div class="pred-analysis">F5 Starter: Away=1.77 Home=3.39 (diff=-1.62) → -0.50 | F5 Matchup: H_Off/A_Def=1.08 A_Off/H_Def=1.07 → +0.15 | Home Field: +0.06 | Momentum: H=0.40 A=0.70 → -0.15 | H2H: 3-7 (10g) → -0.15</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Tie</div>
   <div class="pred-decision decision-pass">PASS</div>
-  <div class="pred-stats">Tie Prob: 10.0% &nbsp;|&nbsp; Conf: 10% &nbsp;|&nbsp; Score: +0.10</div>
-  <div class="pred-analysis">Parity: Away=0.64 Home=0.42 (gap=0.22) → +0.00 | Starter Duel: Away=1.95 Home=4.20 → +0.10 | F5 Uncertainty: f5Score=-0.70 → +0.00 | F5 Winner Uncertainty: edge=-0.74 → +0.00 | L10 Run Env: avgRpG=4.70 → +0.00</div>
+  <div class="pred-stats">Tie Prob: 20.0% &nbsp;|&nbsp; Conf: 20% &nbsp;|&nbsp; Score: +0.20</div>
+  <div class="pred-analysis">Parity: Away=0.64 Home=0.42 (gap=0.22) → +0.00 | Starter Duel: Away=1.77 Home=3.39 → +0.20 | F5 Uncertainty: f5Score=-1.00 → +0.00 | F5 Winner Uncertainty: edge=-0.59 → +0.00 | L10 Run Env: avgRpG=4.70 → +0.00</div>
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>1.95</b></span>
-<span>Home SP ERA: <b>4.20</b></span>
+<span>Away SP: <b>1.77 ERA</b> · 5.9 ip/gs</span>
+<span>Home SP: <b>3.39 ERA</b> · 6.0 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-NYY-BOS"></div>
 </div>
@@ -429,45 +440,46 @@
 <div class="matchup">MIN @ NYM</div>
 <div class="venue">Citi Field</div>
 <div class="lines">
-<span>Game O/U: <b>7.5</b></span>
+<span>Game O/U: <b>18.5</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away -110 / Home -105</span>
+<span>ML: Away +805 / Home -2095</span>
 </div>
+<div class="park-context"><span class="park-badge park-neutral">PF 97</span><span class="park-badge ">71°F</span><span class="park-badge wind-in">9mph In from CF</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
-  <div class="pred-decision decision-bet">OVER</div>
-  <div class="pred-stats">Over: 75.5% &nbsp;|&nbsp; Conf: 38% &nbsp;|&nbsp; Score: +0.75 &nbsp;|&nbsp; <span class="kelly">risk $2.87 &rarr; win $2.61</span></div>
-  <div class="pred-analysis">Proj: 8.08 vs 7.5 (diff=+0.58) → +0.25 | Synergy: AwayO=4.96 HomeO=3.25 AwayERA=3.29 HomeERA=4.20 → +0.00 | Season O/U: Away=14-10 (0.58) Home=10-12 (0.45) → +0.15 | L10 O/U: Away=7-3 (0.70) Home=4-6 (0.40) → +0.20 | L10 Run Env: 8.45 vs line 7.5 → +0.15 | H2H: 5-5 (10g, avgRuns=7.9) → +0.00</div>
+  <div class="pred-decision decision-bet decision-away">UNDER</div>
+  <div class="pred-stats">Over: 20.6% &nbsp;|&nbsp; Conf: 45% &nbsp;|&nbsp; Score: -0.90</div>
+  <div class="pred-analysis">Proj: 8.62 vs 18.5 (diff=-9.88) → -1.00 | Synergy: AwayO=5.08 HomeO=3.52 AwayERA=3.90 HomeERA=4.37 → +0.00 | Season O/U: Away=14-10 (0.58) Home=10-12 (0.45) → +0.15 | L10 O/U: Away=7-3 (0.70) Home=4-6 (0.40) → +0.20 | L10 Run Env: 8.45 vs line 18.5 → -0.25 | H2H: 5-5 (10g, avgRuns=7.9) → +0.00</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
   <div class="pred-decision decision-bet decision-away">AWAY</div>
-  <div class="pred-stats">Home Win: 7.5% &nbsp;|&nbsp; Conf: 70% &nbsp;|&nbsp; Score: -1.40 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
-  <div class="pred-analysis">Net R: H=-1.08 A=+0.54 → -0.73 | Matchup: H_Off/A_Def=0.74 A_Off/H_Def=1.15 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=3.29 Home=4.20 (diff=-0.91) → -0.20 | Momentum: H=0.10 (1-9) A=0.50 (5-5) → -0.30 | Season: H=4-7 (0.36) A=5-6 (0.45) → +0.00 | H2H Winner: 5-5 (10g) → +0.00</div>
+  <div class="pred-stats">Home Win: 10.3% &nbsp;|&nbsp; Conf: 60% &nbsp;|&nbsp; Score: -1.20 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $40.25</span></div>
+  <div class="pred-analysis">Net R: H=-0.96 A=+0.44 → -0.63 | Matchup: H_Off/A_Def=0.76 A_Off/H_Def=1.13 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=3.90 Home=4.37 (diff=-0.47) → -0.10 | Momentum: H=0.10 (1-9) A=0.50 (5-5) → -0.30 | Season: H=4-7 (0.36) A=5-6 (0.45) → +0.00 | H2H Winner: 5-5 (10g) → +0.00</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
-  <div class="pred-decision decision-pass">PASS</div>
-  <div class="pred-stats">Over: 55.6% &nbsp;|&nbsp; Conf: 8% &nbsp;|&nbsp; Score: +0.15</div>
-  <div class="pred-analysis">F5 Proj: 4.39 vs 4.5 (diff=-0.11) → +0.00 | ERA Quality: Away=3.29 Home=4.20 avg=3.75 → +0.00 | L10 O/U: Away=0.70 Home=0.40 → +0.15 | H2H F5 Est: 4.35 vs 4.5 → +0.00</div>
+  <div class="pred-decision decision-lean">LEAN OVER</div>
+  <div class="pred-stats">Over: 59.3% &nbsp;|&nbsp; Conf: 13% &nbsp;|&nbsp; Score: +0.25</div>
+  <div class="pred-analysis">F5 Proj: 4.71 vs 4.5 (diff=+0.21) → +0.00 | ERA Quality: Away=3.90 Home=4.37 avg=4.14 → +0.10 | L10 O/U: Away=0.70 Home=0.40 → +0.15 | H2H F5 Est: 4.35 vs 4.5 → +0.00</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Winner</div>
   <div class="pred-decision decision-bet decision-away">AWAY</div>
-  <div class="pred-stats">Home Win: 27.4% &nbsp;|&nbsp; Conf: 27% &nbsp;|&nbsp; Score: -0.54 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
-  <div class="pred-analysis">F5 Starter: Away=3.29 Home=4.20 (diff=-0.91) → -0.20 | F5 Matchup: H_Off/A_Def=0.74 A_Off/H_Def=1.15 → -0.15 | Home Field: +0.06 | Momentum: H=0.10 A=0.50 → -0.25 | H2H: 5-5 (10g) → +0.00</div>
+  <div class="pred-stats">Home Win: 31.2% &nbsp;|&nbsp; Conf: 22% &nbsp;|&nbsp; Score: -0.44 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
+  <div class="pred-analysis">F5 Starter: Away=3.90 Home=4.37 (diff=-0.47) → -0.10 | F5 Matchup: H_Off/A_Def=0.76 A_Off/H_Def=1.13 → -0.15 | Home Field: +0.06 | Momentum: H=0.10 A=0.50 → -0.25 | H2H: 5-5 (10g) → +0.00</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Tie</div>
-  <div class="pred-decision decision-pass">BET TIE</div>
-  <div class="pred-stats">Tie Prob: 53.0% &nbsp;|&nbsp; Conf: 53% &nbsp;|&nbsp; Score: +0.53</div>
-  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.45 Home=0.36 (gap=0.09) → +0.20 | Starter Duel: Away=3.29 Home=4.20 → +0.10 | F5 Uncertainty: f5Score=+0.15 → +0.15 | F5 Winner Uncertainty: edge=-0.54 → +0.00 | L10 Run Env: avgRpG=3.85 → +0.08</div>
+  <div class="pred-decision decision-pass">LEAN TIE</div>
+  <div class="pred-stats">Tie Prob: 43.0% &nbsp;|&nbsp; Conf: 43% &nbsp;|&nbsp; Score: +0.43</div>
+  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.45 Home=0.36 (gap=0.09) → +0.20 | Starter Duel: Away=3.90 Home=4.37 → +0.00 | F5 Uncertainty: f5Score=+0.25 → +0.15 | F5 Winner Uncertainty: edge=-0.44 → +0.00 | L10 Run Env: avgRpG=3.85 → +0.08</div>
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>3.29</b></span>
-<span>Home SP ERA: <b>4.20</b></span>
+<span>Away SP: <b>3.90 ERA</b> · 5.4 ip/gs</span>
+<span>Home SP: <b>4.37 ERA</b> · 1.3 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-MIN-NYM"></div>
 </div>
@@ -475,45 +487,46 @@
 <div class="matchup">PIT @ TEX</div>
 <div class="venue">Globe Life Field</div>
 <div class="lines">
-<span>Game O/U: <b>7.5</b></span>
+<span>Game O/U: <b>8.5</b></span>
 <span>F5 O/U: <b>4.5</b></span>
-<span>ML: Away +135 / Home -160</span>
+<span>ML: Away +3300 / Home -10000</span>
 </div>
+<div class="park-context"><span class="park-badge park-neutral">PF 103</span><span class="park-badge ">76°F</span><span class="park-badge wind-out">8mph Out to LF</span></div>
 <div class="predictions">
 <div class="pred-block">
   <div class="pred-label">Game Total</div>
-  <div class="pred-decision decision-lean">LEAN OVER</div>
-  <div class="pred-stats">Over: 62.8% &nbsp;|&nbsp; Conf: 18% &nbsp;|&nbsp; Score: +0.35</div>
-  <div class="pred-analysis">Proj: 7.32 vs 7.5 (diff=-0.18) → +0.00 | Synergy: AwayO=5.08 HomeO=4.21 AwayERA=3.15 HomeERA=2.32 → +0.00 | Season O/U: Away=14-10 (0.58) Home=11-11 (0.50) → +0.15 | L10 O/U: Away=6-4 (0.60) Home=5-5 (0.50) → +0.20 | L10 Run Env: 9.65 vs line 7.5 → +0.25 | H2H: 7-3 (10g, avgRuns=6.6) → -0.25</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 50.0% &nbsp;|&nbsp; Conf: 0% &nbsp;|&nbsp; Score: +0.00</div>
+  <div class="pred-analysis">Proj: 7.90 vs 8.5 (diff=-0.60) → -0.25 | Synergy: AwayO=4.92 HomeO=4.28 AwayERA=4.88 HomeERA=2.13 → +0.00 | Season O/U: Away=14-10 (0.58) Home=11-11 (0.50) → +0.15 | L10 O/U: Away=6-4 (0.60) Home=5-5 (0.50) → +0.20 | L10 Run Env: 9.65 vs line 8.5 → +0.15 | H2H: 7-3 (10g, avgRuns=6.6) → -0.25</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">Game Winner</div>
-  <div class="pred-decision decision-pass">PASS</div>
-  <div class="pred-stats">Home Win: 45.6% &nbsp;|&nbsp; Conf: 5% &nbsp;|&nbsp; Score: -0.10</div>
-  <div class="pred-analysis">Net R: H=+0.42 A=+1.04 → -0.28 | Matchup: H_Off/A_Def=1.04 A_Off/H_Def=1.34 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=3.15 Home=2.32 (diff=+0.83) → +0.20 | Momentum: H=0.50 (5-5) A=0.50 (5-5) → +0.00 | Season: H=4-4 (0.50) A=6-5 (0.55) → +0.00 | H2H Winner: 7-3 (10g) → +0.15</div>
+  <div class="pred-decision decision-lean">LEAN HOME</div>
+  <div class="pred-stats">Home Win: 66.9% &nbsp;|&nbsp; Conf: 20% &nbsp;|&nbsp; Score: +0.39</div>
+  <div class="pred-analysis">Net R: H=+0.60 A=+0.80 → -0.09 | Matchup: H_Off/A_Def=1.04 A_Off/H_Def=1.34 → -0.25 | Home Field: base +0.08, adj=+0.00 → +0.08 | Starter ERA: Away=4.88 Home=2.13 (diff=+2.75) → +0.50 | Momentum: H=0.50 (5-5) A=0.50 (5-5) → +0.00 | Season: H=4-4 (0.50) A=6-5 (0.55) → +0.00 | H2H Winner: 7-3 (10g) → +0.15</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Total</div>
-  <div class="pred-decision decision-bet decision-away">UNDER</div>
-  <div class="pred-stats">Over: 32.1% &nbsp;|&nbsp; Conf: 25% &nbsp;|&nbsp; Score: -0.50</div>
-  <div class="pred-analysis">F5 Proj: 3.86 vs 4.5 (diff=-0.64) → -0.25 | ERA Quality: Away=3.15 Home=2.32 avg=2.74 → -0.30 | L10 O/U: Away=0.60 Home=0.50 → +0.15 | H2H F5 Est: 3.63 vs 4.5 → -0.10</div>
+  <div class="pred-decision decision-pass">PASS</div>
+  <div class="pred-stats">Over: 48.1% &nbsp;|&nbsp; Conf: 3% &nbsp;|&nbsp; Score: -0.05</div>
+  <div class="pred-analysis">F5 Proj: 4.27 vs 4.5 (diff=-0.23) → +0.00 | ERA Quality: Away=4.88 Home=2.13 avg=3.51 → -0.10 | L10 O/U: Away=0.60 Home=0.50 → +0.15 | H2H F5 Est: 3.63 vs 4.5 → -0.10</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Winner</div>
-  <div class="pred-decision decision-lean">LEAN HOME</div>
-  <div class="pred-stats">Home Win: 61.5% &nbsp;|&nbsp; Conf: 13% &nbsp;|&nbsp; Score: +0.26</div>
-  <div class="pred-analysis">F5 Starter: Away=3.15 Home=2.32 (diff=+0.83) → +0.20 | F5 Matchup: H_Off/A_Def=1.04 A_Off/H_Def=1.34 → -0.15 | Home Field: +0.06 | Momentum: H=0.50 A=0.50 → +0.00 | H2H: 7-3 (10g) → +0.15</div>
+  <div class="pred-decision decision-bet">HOME</div>
+  <div class="pred-stats">Home Win: 78.2% &nbsp;|&nbsp; Conf: 36% &nbsp;|&nbsp; Score: +0.71 &nbsp;|&nbsp; <span class="kelly">risk $5.00 &rarr; win $4.55</span></div>
+  <div class="pred-analysis">F5 Starter: Away=4.88 Home=2.13 (diff=+2.75) → +0.65 | F5 Matchup: H_Off/A_Def=1.04 A_Off/H_Def=1.34 → -0.15 | Home Field: +0.06 | Momentum: H=0.50 A=0.50 → +0.00 | H2H: 7-3 (10g) → +0.15</div>
 </div>
 <div class="pred-block">
   <div class="pred-label">F5 Tie</div>
   <div class="pred-decision decision-pass">BET TIE</div>
-  <div class="pred-stats">Tie Prob: 60.0% &nbsp;|&nbsp; Conf: 60% &nbsp;|&nbsp; Score: +0.60</div>
-  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.55 Home=0.50 (gap=0.05) → +0.30 | Starter Duel: Away=3.15 Home=2.32 → +0.20 | F5 Uncertainty: f5Score=-0.50 → +0.00 | F5 Winner Uncertainty: edge=+0.26 → +0.10 | L10 Run Env: avgRpG=5.45 → +0.00</div>
+  <div class="pred-stats">Tie Prob: 65.0% &nbsp;|&nbsp; Conf: 65% &nbsp;|&nbsp; Score: +0.65</div>
+  <div class="pred-analysis">⚠ Suspended (calibrating — 11% win rate vs 22% break-even). Parity: Away=0.55 Home=0.50 (gap=0.05) → +0.30 | Starter Duel: Away=4.88 Home=2.13 → +0.10 | F5 Uncertainty: f5Score=-0.05 → +0.25 | F5 Winner Uncertainty: edge=+0.71 → +0.00 | L10 Run Env: avgRpG=5.45 → +0.00</div>
 </div>
 </div>
 <div class="starters">
-<span>Away SP ERA: <b>3.15</b></span>
-<span>Home SP ERA: <b>2.32</b></span>
+<span>Away SP: <b>4.88 ERA</b> · 4.8 ip/gs</span>
+<span>Home SP: <b>2.13 ERA</b> · 5.1 ip/gs</span>
 </div>
 <div class="ai-summary" id="summary-PIT-TEX"></div>
 </div>
